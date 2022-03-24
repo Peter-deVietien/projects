@@ -1,0 +1,57 @@
+#!/usr/local/bin/python3.7
+
+import sys
+import matplotlib.pyplot as plt
+
+
+script_name=sys.argv[0]
+strike=int(sys.argv[1])
+premium=int(sys.argv[2])
+
+premium_multiples=[2,3,6,9,16,32]
+target_prices=[strike + 2*premium,1000,1200,1500,2000,3000]
+
+s='For June 2022 Tesla Call options \n'\
+'with a Strike Price of $'+str(strike)+' and Premium of $'+str(premium) +'\n'
+print(s)
+
+cost=premium*100
+
+s='Contract premium of $'+str(premium)+\
+' means initial investment of $'+f"{cost:,}.\n"
+print(s)
+
+s='If the stock price is $'+str(strike)+\
+' or below by June 2022, you lose all $'+f"{cost:,}.\n"
+print(s)
+
+s='If the stock price is $'+str(strike+premium)+\
+' by June 2022, you break even.  $0 lost, $0 gained.\n'
+print(s)
+
+ct=0
+profit=[]
+roi=[]
+for target in target_prices:
+
+    profit.append((target-strike-premium)*100)
+    roi.append(int(12/27*profit[ct]/cost*100))
+    if ct<2:
+        s='If $'+str(target)+\
+        ' by June 2022, net profit: +$'+f"{profit[ct]:,}, "\
+        +'Annual ROI: '+str(roi[ct])+'%.'
+    else:
+        s='If $'+str(target)+\
+        ', profit: +$'+f"{profit[ct]:,}, "\
+        +'Annual ROI: '+str(roi[ct])+'%.'
+
+    print(s)
+
+    ct=ct+1
+
+#print(target_prices)
+#print(profit)
+#print(roi)
+
+#plt.plot(target_prices,profit)
+#plt.show()

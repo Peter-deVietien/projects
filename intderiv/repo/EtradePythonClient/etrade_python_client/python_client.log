@@ -1,0 +1,1112 @@
+11/27/2021 04:48:05 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:05 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:05 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:05 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:05 PM Response Body: <Response [401]>
+11/27/2021 04:48:05 PM Response Body: <Response [401]>
+11/27/2021 04:48:05 PM Response Body: <Response [401]>
+11/27/2021 04:48:05 PM Response Body: <Response [401]>
+11/27/2021 04:48:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:12 PM Response Body: <Response [401]>
+11/27/2021 04:48:12 PM Response Body: <Response [401]>
+11/27/2021 04:48:12 PM Response Body: <Response [401]>
+11/27/2021 04:48:12 PM Response Body: <Response [401]>
+11/27/2021 04:48:19 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth realm="",oauth_consumer_key="a26d10298139047cadb08c9b676a87aa",oauth_nonce="f086857a7995834324d1a9bd5a1353f7b759b3b7",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1638060499",oauth_token="vjThAZJiS%2FQCTDfazClJ1PLi7m%2Fuo9f8aarhyA%2BoOQA%3D",oauth_version="1.0",oauth_signature="8GU%2Ft%2FjfES%2BUtX2sTNNwWFOe7a8%3D"'}
+11/27/2021 04:48:19 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth realm="",oauth_consumer_key="a26d10298139047cadb08c9b676a87aa",oauth_nonce="f086857a7995834324d1a9bd5a1353f7b759b3b7",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1638060499",oauth_token="vjThAZJiS%2FQCTDfazClJ1PLi7m%2Fuo9f8aarhyA%2BoOQA%3D",oauth_version="1.0",oauth_signature="8GU%2Ft%2FjfES%2BUtX2sTNNwWFOe7a8%3D"'}
+11/27/2021 04:48:19 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth realm="",oauth_consumer_key="a26d10298139047cadb08c9b676a87aa",oauth_nonce="f086857a7995834324d1a9bd5a1353f7b759b3b7",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1638060499",oauth_token="vjThAZJiS%2FQCTDfazClJ1PLi7m%2Fuo9f8aarhyA%2BoOQA%3D",oauth_version="1.0",oauth_signature="8GU%2Ft%2FjfES%2BUtX2sTNNwWFOe7a8%3D"'}
+11/27/2021 04:48:19 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth realm="",oauth_consumer_key="a26d10298139047cadb08c9b676a87aa",oauth_nonce="f086857a7995834324d1a9bd5a1353f7b759b3b7",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1638060499",oauth_token="vjThAZJiS%2FQCTDfazClJ1PLi7m%2Fuo9f8aarhyA%2BoOQA%3D",oauth_version="1.0",oauth_signature="8GU%2Ft%2FjfES%2BUtX2sTNNwWFOe7a8%3D"'}
+11/27/2021 04:48:19 PM Response Body: {"Error":{"message":"oauth_problem=consumer_key_rejected,oauth_problem_advice=The oauth_consumer_key a26d10298139047cadb08c9b676a87aa can be used only in SANDBOX environment"}}
+11/27/2021 04:48:19 PM Response Body: {"Error":{"message":"oauth_problem=consumer_key_rejected,oauth_problem_advice=The oauth_consumer_key a26d10298139047cadb08c9b676a87aa can be used only in SANDBOX environment"}}
+11/27/2021 04:48:19 PM Response Body: {"Error":{"message":"oauth_problem=consumer_key_rejected,oauth_problem_advice=The oauth_consumer_key a26d10298139047cadb08c9b676a87aa can be used only in SANDBOX environment"}}
+11/27/2021 04:48:19 PM Response Body: {"Error":{"message":"oauth_problem=consumer_key_rejected,oauth_problem_advice=The oauth_consumer_key a26d10298139047cadb08c9b676a87aa can be used only in SANDBOX environment"}}
+11/27/2021 04:48:47 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:47 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:47 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:47 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+11/27/2021 04:48:47 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+11/27/2021 04:48:47 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+11/27/2021 04:48:47 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+11/27/2021 04:48:47 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+12/05/2021 01:12:13 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+12/05/2021 01:12:13 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+12/05/2021 01:12:13 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+12/05/2021 01:12:13 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+12/05/2021 01:12:13 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+12/05/2021 01:12:13 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+12/05/2021 01:12:13 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+12/05/2021 01:12:13 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+01/17/2022 03:55:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+01/17/2022 03:55:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+01/17/2022 03:55:12 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+01/17/2022 03:55:12 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:12 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:12 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:12 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:29 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=261B71DC99D58086DCDFEEC6FFF66F02.tomcat4'}
+01/17/2022 03:55:29 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=261B71DC99D58086DCDFEEC6FFF66F02.tomcat4'}
+01/17/2022 03:55:29 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=261B71DC99D58086DCDFEEC6FFF66F02.tomcat4'}
+01/17/2022 03:55:29 PM Request Header: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=261B71DC99D58086DCDFEEC6FFF66F02.tomcat4'}
+01/17/2022 03:55:29 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:29 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:29 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}
+01/17/2022 03:55:29 PM Response Body: {
+    "QuoteResponse": {
+        "QuoteData": [
+            {
+                "All": {
+                    "adjustedFlag": false,
+                    "ask": 579.73,
+                    "askSize": 100,
+                    "askTime": "16:00:00 EDT 06-20-2012",
+                    "averageVolume": 13896435,
+                    "beta": 0.93,
+                    "bid": 574.04,
+                    "bidExchange": "",
+                    "bidSize": 100,
+                    "bidTime": "16:00:00 EDT 06-20-2012",
+                    "cashDeliverable": 0,
+                    "changeClose": 0.0,
+                    "changeClosePercentage": 0.0,
+                    "companyName": "GOOGLE INC CL A",
+                    "contractSize": 0.0,
+                    "daysToExpiration": 0,
+                    "declaredDividend": 0.0,
+                    "dirLast": "1",
+                    "dividend": 0.0,
+                    "dividendPayableDate": 0,
+                    "eps": 32.99727,
+                    "estEarnings": 43.448,
+                    "exDividendDate": 1344947183,
+                    "expirationDate": 0,
+                    "high": 0.0,
+                    "high52": 670.25,
+                    "intrinsicValue": 0.0,
+                    "lastTrade": 577.51,
+                    "low": 0.0,
+                    "low52": 473.02,
+                    "marketCap": 188282697750.0,
+                    "nextEarningDate": "",
+                    "open": 0.0,
+                    "openInterest": 0,
+                    "optionMultiplier": 0.0,
+                    "optionStyle": "",
+                    "pe": 17.5017,
+                    "previousClose": 577.51,
+                    "previousDayVolume": 2433786,
+                    "primaryExchange": "NASDAQ NM",
+                    "sharesOutstanding": 326025,
+                    "symbolDescription": "GOOGLE INC CL A",
+                    "timeOfLastTrade": 1341334800,
+                    "timePremium": 0.0,
+                    "totalVolume": 0,
+                    "upc": 0,
+                    "week52HiDate": 1325673870,
+                    "week52LowDate": 1308908670,
+                    "yield": 0.0
+                },
+                "Product": {
+                    "securityType": "EQ",
+                    "symbol": "GOOG"
+                },
+                "ahFlag": "false",
+                "dateTime": "16:00:00 EDT 06-20-2012",
+                "dateTimeUTC": 1340222400,
+                "quoteStatus": "REALTIME"
+            }
+        ]
+    }
+}

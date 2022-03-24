@@ -1,0 +1,9 @@
+*.avi
+*.m4v
+*.pdf
+*.pyc
+*.icloud
+*.csv
+*.mat
+*.png
+.DS_Store
