@@ -64,7 +64,8 @@ title('Number of Followers Trump has on Truth Social')
 fig=gcf;
 fig.Position=[476 414 709 452];
 
-ylim([540 740]+40)
+yl=ylim;
+ylim([580 850])
 
 xlim([dates1(1)-days(1) dates1(end)+days(3)])
 
