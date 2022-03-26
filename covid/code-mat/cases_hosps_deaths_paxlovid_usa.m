@@ -31,6 +31,9 @@ for i=1:nc
     seln=isnan(cases);
     cases(seln)=0;
     
+    seln=find(isnan(deaths));
+    deaths(seln(end))=mean(deaths(seln(end)-1),deaths(seln(end)+1));
+    
     % Moving Averages
     casesma=moving_average(dates,cases,cma);
     deathsma=moving_average(dates,deaths,dma);
@@ -82,7 +85,7 @@ for i=1:nc
     %
     grid on
     ax=gca;
-    ax.FontSize=16;
+    ax.FontSize=18;
 
     yyaxis right
     ytickformat('%,.0d')
@@ -91,7 +94,7 @@ for i=1:nc
 
   
     %%
-    xlim([datetime(2021,11,15) datetime(2022,4,15)])
+    xlim([datetime(2021,11,15) datetime(2022,4,1)])
 
     %xdates=linspace(datetime(2021,10,1),dates(end),6);
     %ax.XTickLabel=datestr(xdates,'mmm dd');
@@ -99,10 +102,10 @@ for i=1:nc
     
     lgn=legend(h,'Daily Hospital Admissions','Daily Cases normalized','Daily Paxlovid Deliveries',['Deaths ',num2str(dma),' Day MA * 10'],'autoupdate','off');
     lgn.FontSize=15;
-    lgn.Position=[0.1304 0.7009 0.3623 0.1845];
+    lgn.Position=[0.1304 0.6946 0.3623 0.1845];
     
     y_lim=ylim;
-    text(0.05,-0.1,'Twitter: @peterdevietien  Data: @OurWorldInData, U.S. Department HHS','fontsize',15,'units','normalized')
+    text(0.1,-0.1,'Twitter: @peterdevietien  Data: @OurWorldInData, U.S. Department HHS','fontsize',15,'units','normalized')
          
     t_str=sprintf('%s \nDaily Hospitalizations, Deaths and Paxlovid Deliveries \nIncludes %s',country,datestr(dates(end),'mmm dd'));
     title(t_str)
@@ -117,13 +120,13 @@ for i=1:nc
 %     hold off
     
     fig=gcf;
-    fig.Position=[391 266 668 600];
+    fig.Position=[344 226 715 640];
     
      hTxtx=datetime(2021,10,25);
-     hTxt(1,1)=text(datetime(2022,1,27),28000,{'Daily Deaths'},'FontSize',22,'color',ddcolor,'fontweight','bold');
-     hTxt(2,1)=text(datetime(2022,2,4),15000,{sprintf('Paxlovid \nDeliveries')},'FontSize',20,'color',paxcolor,'fontweight','bold');
-     hTxt(3,1)=text(datetime(2021,11,27),7000,{'Daily Hospitalizations'},'FontSize',24,'color',hospcolor,'fontweight','bold');
-     hTxt(4,1)=text(datetime(2022,3,10),19200,{'Plateaus at 100k/day'},'FontSize',17,'rotation',65,'color',paxcolor);
+     hTxt(1,1)=text(91.5,27080,{'Daily Deaths'},'FontSize',22,'color',ddcolor,'fontweight','bold');
+     hTxt(2,1)=text(102.2,15700,{sprintf('Paxlovid \nDeliveries')},'FontSize',20,'color',paxcolor,'fontweight','bold');
+     hTxt(3,1)=text(22.6,7000,{'Daily Hospitalizations'},'FontSize',24,'color',hospcolor,'fontweight','bold');
+     hTxt(4,1)=text(129.7,17500,{'Plateaus at 100k/day'},'FontSize',17,'rotation',63,'color',paxcolor);
     
     
     %

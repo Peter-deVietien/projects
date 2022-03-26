@@ -4,8 +4,8 @@ load_ppp_worldbank
 
 %%
 
-countries={'UnitedStates','Canada','EuropeanUnion','RussianFederation','China'};
-legendstr={'United States','Canada','European Union','Russia','China'};
+countries={'UnitedStates','France','EuropeanUnion','China'};
+legendstr={'United States','France','European Union','China'};
 nc=numel(countries);
 
 for i=1:nc
@@ -42,12 +42,12 @@ ytickformat('%,.0d')
 ax.YAxis(2).Exponent=0;
 
 lgn=legend(legendstr,'fontsize',18);
-lgn.Position=[0.2624 0.6998 0.1977 0.0994];
+lgn.Position=[0.1295 0.7333 0.1977 0.1914];
 
 tstr=sprintf('WorldBank PPP GDP Per Capita');
 title(tstr,'fontsize',25)
 
-text(datetime(2014,6,1),2100,'@peterdevietien','fontsize',17)
+text(0.5,-0.1,'Twitter: @peterdevietien   Data: WorldBank','fontsize',17,'units','normalized')
 
 
 filename='ppp_usa_eu';
