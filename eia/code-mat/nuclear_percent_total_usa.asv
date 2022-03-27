@@ -1,0 +1,87 @@
+cca
+
+%%
+series_key1='TOTAL.NUETSUS.A';
+
+%%
+[dinit1,metadata1]=load_eia_series(series_key1);
+d1=process_annual_data(dinit1);
+
+%%
+leftycolor=[0 0.4470 0.7410];
+rightycolor=[0.8500 0.3250 0.0980];
+
+%%
+plot(d1.dates,d1.y,'linewidth',4,'color',leftycolor)
+
+%%
+grid on
+ax=gca;
+ax.FontSize=22;
+
+fig=gcf;
+fig.Position=[203 305 847 561];
+
+ylim([0 30])
+
+yticks=ax.YTick;
+
+nt=numel(yticks);
+
+yticklabels=cell(nt,1);
+for i=1:nt
+    yticklabels(i)={sprintf('%d%%',yticks(i))};
+end
+
+ax.YTickLabel=yticklabels;
+
+%%
+%nuclear_percent_total_usa_text
+
+hold on
+plot([datetime(1974,10,11) datetime(1974,10,11)],[0 23],'k--')
+%plot([datetime(1979,3,16) datetime(1979,3,16)],[0 23],'k--')
+plot([datetime(1979,3,28) datetime(1979,3,28)],[0 23],'k--')
+plot([datetime(1986,4,26) datetime(1986,4,26)],[0 23],'k--')
+plot([datetime(1987,12,15) datetime(1987,12,15)],[0 23],'k--')
+hold off
+
+t1=text(datetime(1974,10,11),23.5,'1','fontsize',19,'horizontalalignment','center');
+t2=text(datetime(1979,03,16),23.5,'2a, 2b','fontsize',19,'horizontalalignment','center');
+t3=text(datetime(1986,04,26),23.5,'3','fontsize',19,'horizontalalignment','center');
+t4=text(datetime(1987,12,15),23.5,'4','fontsize',19,'horizontalalignment','center');
+
+yshift=0;
+xtxt=datetime(1990,1,1);
+fntsize=15;
+
+txt1=text(xtxt,15.3279,'1','fontsize',fntsize);
+txt1.String=sprintf('1. Nuclear Reorganization Act 1974: Pro \n  nuclear Atomic Energy Commission replaced\n  with Nuclear Regulatory Commission (NRC)')
+
+txt2a=text(xtxt,11.9836,'2','fontsize',fntsize);
+txt2a.String=sprintf('2a. Three Mile Island: Zero deaths, infinite news')
+
+txt2b=text(xtxt,9.918,'3','fontsize',fntsize);
+txt2b.String=sprintf('2b. China Syndrome: Jane Fonda nuclear\n disinformation movie');
+
+txt3=text(xtxt,6.2787,'3','fontsize',fntsize);
+txt3.String=sprintf('3. Chernobyl: Worst nuclear accident possible\nFewer deaths & destruction than most \ndam breaks.  ');
+
+txt4=text(xtxt,1.9508,'4','fontsize',fntsize);
+txt4.String=sprintf('4. "NRC Coziness with Industry"');
+ax.XGrid='off';
+
+tt=title(sprintf('Nuclear Fission\nPercent of Total U.S. Electricity'),'fontsize',30);
+tt.Units='normalized';
+tt.Position=[0.5 0.83 0];
+
+%%
+
+
+%k=sprintf("'Prior to 1975 the Atomic Energy Commission \nwas in charge of matters regarding radionuclides. \nThe AEC was dissolved, because it was perceived as\n unduly favoring the industry it was charged with regulating.'");
+%text(0.62,0.14,k,'fontsize',18,'horizontalalignment','center','units','normalized')
+
+
+text(0.6,-0.1,'Twitter: @peterdevietien   Data: EIA','fontsize',16,'units','normalized')
+%%
+print('~/projects/eia/post/nuclear_percent_total_usa','-dpng')
