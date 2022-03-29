@@ -62,7 +62,7 @@ ylabel('Trump Followers [thousands]')
 title('Number of Followers Trump has on Truth Social')
 
 fig=gcf;
-fig.Position=[476 414 709 452];
+fig.Position=[476 330 709 536];
 
 yl=ylim;
 ylim([580 850])
