@@ -33,20 +33,20 @@ ax=gca;
 ax.FontSize=24;
 
 yticks=[90:0.5:106];
-ax.YTick=yticks;
+%ax.YTick=yticks;
 ytickformat('%,.1f')
 ax=gca;
 ax.YAxis(1).Exponent=0;
 
-ylim([99 104.5])
-yliml=ylim;
+%ylim([99 104.5])
+%yliml=ylim;
 
 
-ylbl=ylabel('Global Production [mbpd]');
-ylbl.Position(1)=-230;
+ylbl=ylabel('Days Remaining');
+%ylbl.Position(1)=-230;
 
 yyaxis right
-ylim(yliml)
+%ylim(yliml)
 ax.YAxis(2).Color='k';
 
 

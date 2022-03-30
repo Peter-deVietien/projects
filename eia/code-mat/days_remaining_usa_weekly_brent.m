@@ -69,7 +69,7 @@ ax.FontSize=18;
 ax.GridAlpha=0.3;
 
 fig=gcf;
-fig.Position=[144 341 892 525];
+fig.Position=[46 330 990 536];
 
 ylim([65 115])
 
@@ -130,16 +130,16 @@ ax.YAxis(2).Color=racolor;
 p=plot(dates,brent_infl,'color',racolor,'linewidth',3);
 p.Color(4)=0.5;
 xl=xlim;
-xlim([xl(1) xl(2)+calmonths(6)]);
+xlim([datetime(1995,1,1) xl(2)+calmonths(6)]);
 
 %xlim([datetime(2006,1,1)  datetime(2010,1,1)])
 
 ylabel('Brent [2022 USD]')
 
 lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',18);
-lgn.Position=[0.1301 0.7304 0.2702 0.1324];
+lgn.Position=[0.1295 0.7342 0.2434 0.1321];
 
-tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes March 23rd Release');%s',datestr(d2.dates(end),'yyyy mmm dd'));
+tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes March 30th Release');%s',datestr(d2.dates(end),'yyyy mmm dd'));
 tt=title(tstr);
 %tt.Position(2)=125;
 %tt.Position(1)=3.300e+03;
@@ -147,9 +147,9 @@ tt.FontSize=24;
 
 tt.FontName='Arial Unicode MS';%fname;
 
-%text(datetime(2001,12,1),62,'Total Inventory incl. SPR / 4 Wk Average Total Product Consumed','fontsize',15)
-
-text(0.62,-0.105,'Twitter: @peterdevietien   Data: EIA','fontsize',17,'units','normalized')
+text(0.42,0.02,'Total Inventory incl. SPR / 4 Wk Average Total Product Consumed','fontsize',15,'units','normalized')
+%text(0.62,-0.105,'Twitter: @peterdevietien   Data: EIA','fontsize',17,'units','normalized')
+text(0.42,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA','fontsize',17,'units','normalized')
 
 %%
 filename='days-remaining-usa-weekly-brent';

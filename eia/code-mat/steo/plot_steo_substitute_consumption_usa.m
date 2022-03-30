@@ -16,7 +16,7 @@ steo_color=[0 0.4470 0.7410 0.6];
 substitute_color=[0 0.4470 0.7410 1];
     
 addpath('..')
-[gdates,gconsumption]=load_steo_global_consump(dirnames{1});
+[gdates,gconsumption]=load_steo_global_consumption(dirnames{1});
 [udates,uconsumption]=load_steo_usa_consum(dirnames{1});
 
 %% Load EIA weekly data
@@ -29,16 +29,16 @@ wdates=d.dates;
 weekly_consump=d.y;
 
 %% Manual Add
-wdates=[wdates;datetime(2022,2,25)];
-weekly_consump=[weekly_consump;21734];
+eia_weekly_manual_data
+
+wdates=[wdates;mandates];
+weekly_consump=[weekly_consump;mantotal_product_4wk];
 
 %%
 
 ind=find(wdates>datetime(2018,1,1),1,'first');
 wdates=wdates(ind:end);
 weekly_consump=weekly_consump(ind:end);
-
-
 
 %%
 ngdays=days(gdates-datetime(2018,1,1));
@@ -87,11 +87,11 @@ ax.YTick=yticks;
 fig=gcf;
 fig.Position=[95 191 941 675];
 
-lastdatestr='February 24th';
-ttl=title(sprintf('February ''22 STEO Consumption\nU.S. STEO Substituted with 4 Wk Avg Product Supplied\nIncludes %s EIA Release',lastdatestr),'fontsize',22);
+lastdatestr='March 30th';
+ttl=title(sprintf('March ''22 STEO Consumption\nSubstituted U.S. 4 Wk Avg Product Supplied\nIncludes %s EIA Release',lastdatestr),'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
 
-text(datetime(2021,8,1),90.7,'@peterdevietien     Data: EIA STEOs','fontsize',18)
+text(0.3,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data: EIA STEOs','fontsize',18,'units','normalized')
 
 
 lgn=legend('Feb ''22 STEO Consumption','U.S. 4 Wk Product Supplied Substituted');

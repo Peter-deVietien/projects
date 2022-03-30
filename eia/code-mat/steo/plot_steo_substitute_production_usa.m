@@ -4,7 +4,7 @@ cca
 %lgnnames={'Jan ''21','Mar ''21','May ''21','July ''21','Sep ''21','Nov ''21','Jan ''22'};
 
 dirname_base={'feb22'};
-lgnnames={'February STEO ''22'};
+lgnnames={'March STEO ''22'};
 
 nd=numel(dirname_base);
 
@@ -19,7 +19,7 @@ substitute_color=[0 0.4470 0.7410 1];
 [udates,uproduction]=load_steo_usa_product(dirnames{1});
 
 %% Load EIA weekly data
-filename='weekly_mar16.xls';
+filename='weekly_mar30.xls';
 [wdates,weekly_prod]=load_weekly_production(filename);
 
 ind=find(wdates>datetime(2018,1,1),1,'first');
@@ -75,14 +75,13 @@ ax.YTick=yticks;
 fig=gcf;
 fig.Position=[95 191 941 675];
 
-lastdatestr='February 24th';
-ttl=title(sprintf('February ''22 STEO Production\nSubstituted with 4 Wk Domestic and Other Production\nIncludes %s EIA Release',lastdatestr),'fontsize',22);
+lastdatestr='March 30th';
+ttl=title(sprintf('March ''22 STEO Production\nSubstituted with 4 Wk avg U.S. Production\nIncludes %s EIA Release',lastdatestr),'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
 
-text(datetime(2021,8,1),91,'@peterdevietien     Data: EIA STEOs','fontsize',18)
+text(0.3,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data: EIA STEOs','fontsize',18,'units','normalized')
 
-
-lgn=legend('Feb ''22 STEO Production','U.S. 4 Wk Avg Production Substituted');
+lgn=legend('Mar ''22 STEO Production','U.S. 4 Wk Avg Production Substituted');
 lgn.Position=[0.3629 0.7622 0.3422 0.0919];
 
 %%

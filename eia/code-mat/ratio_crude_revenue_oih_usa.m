@@ -7,8 +7,15 @@ series1='PET.RWTC.W';
 [dinit1,metadata]=load_eia_series(series1);
 d1=process_weekly_data(dinit1);
 
+%%
+eia_weekly_manual_data
+
+d1.dates=[d1.dates;mandates];
+d1.y=[d1.y;manbrent];
+
+
 addpath('steo')
-filename='weekly_feb25.xls';
+filename='weekly_mar30.xls';
 [wdates,weekly_prod]=load_weekly_domestic(filename);
 
 ticker='OIH';

@@ -60,13 +60,15 @@ series_id='PET.WRPUPUS2.4';
 d=load_eia_series(series_id);
 d=process_weekly_data(d);
 
+%% Manual Add
+eia_weekly_manual_data
+
+d.dates=[d.dates;mandates];
+d.y=[d.y;mantotal_product_4wk];
+
 ind=find(d.dates>datetime(2018,1,1),1,'first');
 d.dates=d.dates(ind:end);
 d.y=d.y(ind:end)/1000;
-
-%% Manual Add
-% d.dates=[d.dates; datetime(2022,3,4)];
-% d.y=[d.y; 21.566];
 
 
 hold on
@@ -109,7 +111,7 @@ ttl=title(title_str,'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
 
 lgn=legend(lgnnames,'fontsize',18);
-lgn.Position=[0.2619 0.7786 0.3379 0.0704];
+lgn.Position=[0.1301 0.8423 0.3379 0.0704];
 
 ylim([17 23])
 xlim([datetime(2019,1,1) datetime(2022,12,1)])
@@ -118,7 +120,7 @@ xlim([datetime(2019,1,1) datetime(2022,12,1)])
 text(0.42,0.025,sprintf('Weekly includes data for week ending %s',datestr(d.dates(end))),'units','normalized','fontsize',18)
 
 
-text(0.45,-0.1,'Twitter: @peterdevietien     Data:  EIA STEOs & EIA','fontsize',18,'units','normalized')
+text(0.25,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',16,'units','normalized')
 
 ylbl.Position(1)=230;
 ylbl.Position(2)=20;

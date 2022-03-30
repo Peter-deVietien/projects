@@ -66,14 +66,19 @@ series_id='PET.WTESTUS1.W';
 d=load_eia_series(series_id);
 d=process_weekly_data(d);
 
+%% Manual Add
+eia_weekly_manual_data
+
+d.dates=[d.dates; mandates];
+d.y=[d.y;maninventoriesnospr];
+
 
 ind=find(d.dates>datetime(2017,1,1),1,'first');
 d.dates=d.dates(ind:end);
 d.y=d.y(ind:end)/1000;
 
-%% Manual Add
-d.dates=[d.dates; datetime(2022,3,18)];
-d.y=[d.y; 1.1368e3];
+
+
 
 hold on
 plot(d.dates,d.y,'linewidth',3,'color','m')
@@ -125,7 +130,7 @@ xlim([datetime(2019,6,1) datetime(2022,12,1)])
 fig=gcf;
 fig.Position=[95 191 941 675];
 
-lastdatestr='March 16th';
+lastdatestr='March 30th';
 title_str=sprintf('U.S. Commercial Crude and Product Inventories\nIncludes %s EIA Release',lastdatestr);
 ttl=title(title_str,'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
@@ -135,7 +140,7 @@ lgn=legend(lgnnames);
 lgn.FontSize=22;
 lgn.Position=[0.5818 0.7488 0.3231 0.1622];
 
-text(datetime(2021,5,1),1115,'Twitter: @peterdevietien     Data:  EIA STEOs & EIA','fontsize',18)
+text(0.2,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',18,'units','normalized')
 
 %%
 pngname='~/projects/eia/post/steo_weekly_usa_inventory';
