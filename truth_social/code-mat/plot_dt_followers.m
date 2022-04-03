@@ -54,6 +54,8 @@ per_hour2=num2cstr(round(mo2*1000/24,0));
 grid on
 ax=gca;
 ax.FontSize=20;
+ax.XAxis.TickLabelFormat='MMM dd';
+
 
 
 
@@ -65,15 +67,15 @@ fig=gcf;
 fig.Position=[476 330 709 536];
 
 yl=ylim;
-ylim([580 850])
+ylim([580 850]+60)
 
 xlim([dates1(1)-days(1) dates1(end)+days(3)])
 
-lgn=legend(p,sprintf('New Followers Per Hour, Past 5 Days: %s',per_hour1),sprintf('New Followers Per Hour, Past Day: %s',per_hour2))
+lgn=legend(p,sprintf('New Followers Per Hour, Past 5 Days: %s',per_hour1),sprintf('New Followers Per Hour, Past Day: %s',per_hour2));
 lgn.Position=[0.1291 0.8197 0.5416 0.1051];
 text(0.33,0.82,sprintf('40,000/hr needed for 1m/day'),'fontsize',20,'units','normalized','horizontalalignment','center')
 
-text(0.15,-0.12,'Twitter: @peterdevietien   Data: Truth Social','fontsize',18,'units','normalized')
+text(0.15,-0.1,'Twitter: @peterdevietien   Data: Truth Social','fontsize',18,'units','normalized')
 
 %%
 print('~/projects/truth_social/post/trump_followers','-dpng')
