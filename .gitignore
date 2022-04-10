@@ -8,3 +8,5 @@
 *.png
 .DS_Store
 !mutual_code/CPIAUCSL.csv
+!bloomberg/*
+!bloomberg/*/*
