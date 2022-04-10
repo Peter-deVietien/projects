@@ -43,15 +43,15 @@ xlim([d1.dates(100) d1.dates(end)+calmonths(12)])
 
 ax=gca;
 ax.FontSize=22;
-y_lim=[3 11];
+y_lim=[1 4];
 ylim(y_lim);
-yticks=[2:12];
+yticks=[1:1:4];
 ax.YTick=yticks;
 
 yticklbl={};
 
 for i=1:numel(yticks)
-    yticklbl{i}=sprintf('%.0d%%',yticks(i));
+    yticklbl{i}=sprintf('%.0f%%',yticks(i));
 end
 
 ax.YTickLabel=yticklbl;

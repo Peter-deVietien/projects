@@ -20,7 +20,7 @@ for i=1:nc
     excess_mort=t.excess_mortality(sel);
     deaths=t.new_deaths(sel);
     
-    % Remove nans
+%    Remove nans
     seln=isnan(excess_mort);
     excess_mort(seln)=[];
     emdates=dates;
@@ -28,26 +28,41 @@ for i=1:nc
     
     % Moving Averages
     deathsma=moving_average(dates,deaths,dma);
-    emdeaths=deathsma;
-    emdeaths(seln)=[];
-    emdeaths=emdeaths/max(emdeaths)*max(excess_mort);
-
+    deathsma=dspline(dates,deathsma,dates);
+    deathsma=deathsma(55:end);
+    dates=dates(55:end);
+    
     %%
     
     h(1)=plot(emdates,excess_mort,'b-','linewidth',4);
     h(1).Color(4)=0.7;
     
+    ylim([0 50])
+    lylbl=ylabel('Percent Excess Mortality');
+    lylbl.Position=[-90 25 -1];
     
-    hold on
-    h(2)=plot(emdates,emdeaths,'r-','linewidth',4);
-    h(2).Color(4)=0.7;
-    hold off
-    
-    
-    %
-    grid on
     ax=gca;
+    yticks=ax.YTick;
+    ytlabel=[];
+    for i=1:numel(yticks)
+        ytlabel=[ytlabel {sprintf('%d%%',yticks(i))}];
+    end
+    
+    ax.YTickLabel=ytlabel;
+    
+    yyaxis right
+    h(2)=plot(dates,deathsma,'r-','linewidth',4);
+    h(2).Color(4)=0.7;
+    
+    ylabel('Daily Deaths')
+    
+    %%
+    ax=gca;
+    ax.YAxis(1).Color='b';
+    ax.YAxis(2).Color='r';
     ax.FontSize=20;
+
+    grid on
     
     %%
     t_str=sprintf('%s Excess Mortality and Deaths \nIncludes %s',country,datestr(dates(end),'mmm dd'));
@@ -62,13 +77,10 @@ for i=1:nc
     x_lim=xlim;
     xlim([x_lim(1) x_lim(2)+days(20)])
     
-    ylim([0 50])
+
     
     %% Extra Adornments
-    y_lim=ylim;
-    text(datetime(2020,8,1),-y_lim(2)/10,'Graphs from @peterdevietien','fontsize',15)
-    text(datetime(2021,4,1),-y_lim(2)/10,'Data from @OurWorldInData','fontsize',15)
-     
+    text(0.6,-0.1,'Twitter: @peterdevietien  Data: OWID','fontsize',18,'units','normalized')
     
     %%
     printstr=sprintf('~/projects/covid/post/omicron/excess-mortality-deaths-%s',country);

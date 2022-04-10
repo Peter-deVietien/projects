@@ -63,7 +63,7 @@ for i=1:nc
     ax.YAxis(1).Exponent=0;
 
 
-    y_lim=[0 30000];
+    y_lim=[0 40000];
     ylim(y_lim)
     %%
     %yyaxis right
@@ -94,7 +94,7 @@ for i=1:nc
 
   
     %%
-    xlim([datetime(2021,11,15) datetime(2022,4,1)])
+    xlim([datetime(2021,11,15) datetime(2022,5,1)])
 
     %xdates=linspace(datetime(2021,10,1),dates(end),6);
     %ax.XTickLabel=datestr(xdates,'mmm dd');
@@ -123,10 +123,10 @@ for i=1:nc
     fig.Position=[344 226 715 640];
     
      hTxtx=datetime(2021,10,25);
-     hTxt(1,1)=text(91.5,27080,{'Daily Deaths'},'FontSize',22,'color',ddcolor,'fontweight','bold');
-     hTxt(2,1)=text(102.2,15700,{sprintf('Paxlovid \nDeliveries')},'FontSize',20,'color',paxcolor,'fontweight','bold');
-     hTxt(3,1)=text(22.6,7000,{'Daily Hospitalizations'},'FontSize',24,'color',hospcolor,'fontweight','bold');
-     hTxt(4,1)=text(129.7,17500,{'Plateaus at 100k/day'},'FontSize',17,'rotation',63,'color',paxcolor);
+     hTxt(1,1)=text(70.7,28100,{'Daily Deaths'},'FontSize',22,'color',ddcolor,'fontweight','bold');
+     hTxt(2,1)=text(120.0,34500,{sprintf('Paxlovid \nDeliveries')},'FontSize',20,'color',paxcolor,'fontweight','bold');
+     hTxt(3,1)=text(12.65,4970,{'Daily Hospitalizations'},'FontSize',24,'color',hospcolor,'fontweight','bold');
+     hTxt(4,1)=text(121.86,19400,{'Plateaus at 100k/day'},'FontSize',17,'rotation',63,'color',paxcolor);
     
     
     %

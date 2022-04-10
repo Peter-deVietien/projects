@@ -126,6 +126,7 @@ brent_infl=brent./sinfl;
 %%
 racolor=[0.8500 0.3250 0.0980 1];
 ax.YAxis(2).Color=racolor;
+ax.XGrid='off';
  
 p=plot(dates,brent_infl,'color',racolor,'linewidth',3);
 p.Color(4)=0.5;
@@ -139,7 +140,7 @@ ylabel('Brent [2022 USD]')
 lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',18);
 lgn.Position=[0.1295 0.7342 0.2434 0.1321];
 
-tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes March 30th Release');%s',datestr(d2.dates(end),'yyyy mmm dd'));
+tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes April 6th Release');%s',datestr(d2.dates(end),'yyyy mmm dd'));
 tt=title(tstr);
 %tt.Position(2)=125;
 %tt.Position(1)=3.300e+03;

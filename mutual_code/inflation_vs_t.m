@@ -1,6 +1,6 @@
 function [dates,infl]=inflation_vs_t(dates)
 
-t=readtable('~/projects/eia/data/CPIAUCSL.csv');
+t=readtable('~/projects/mutual_code/CPIAUCSL.csv');
 
 cpi=t.CPIAUCSL;
 

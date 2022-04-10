@@ -2,7 +2,7 @@ function [dates,production] = load_weekly_production(filename)
 
 filepath=sprintf('~/projects/eia/data/%s',filename);
 
-t=readtable(filepath,'Sheet','Data 3','Range','A3:P2060');
+t=readtable(filepath,'Sheet','Data 3','Range','A3:P2100');
 
 
 dates=t.Date;

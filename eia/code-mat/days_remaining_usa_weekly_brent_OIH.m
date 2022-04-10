@@ -38,14 +38,18 @@ d1.y=d1.y(k1);
 
 %% Manual Add
 
-d1.dates=[d1.dates; datetime(2022,3,4)];
-d1.y=[d1.y; 1.7246e3];
+%% Manual Add
 
-d2.dates=[d2.dates; datetime(2022,3,4)];
-d2.y=[d2.y; 21.566];
+eia_weekly_manual_data
 
-d3.dates=[d3.dates; datetime(2022,3,4)];
-d3.y=[d3.y; 115];
+d1.dates=[d1.dates; mandates];
+d1.y=[d1.y; maninventories];
+
+d2.dates=[d2.dates; mandates];
+d2.y=[d2.y; mantotal_product_4wk];
+
+d3.dates=[d3.dates; mandates];
+d3.y=[d3.y; manbrent];
 
 %%
 days_remaining=d1.y./d2.y;
@@ -53,10 +57,11 @@ days_remaining=d1.y./d2.y;
 %%
 lacolor=[0 0.4470 0.7410];
 
-plot(d1.dates,days_remaining,'linewidth',3,'color',lacolor)
+p=plot(d1.dates,days_remaining,'linewidth',3,'color',lacolor);
+p.Color(4)=0.4;
 
 hold on
-plot([d1.dates(1) d1.dates(end)],[1 1]*days_remaining(end),'color','b')
+%plot([d1.dates(1) d1.dates(end)],[1 1]*days_remaining(end),'color','b')
 hold off
 
 %%
@@ -75,6 +80,7 @@ ylabel('Days Remaining')
 
 yt=ax.YTick;
 yl=ylim;
+ylim([65 115])
 
 
 
@@ -121,9 +127,10 @@ brent_infl=brent./sinfl;
 %%
 racolor=[0.8500 0.3250 0.0980 1];
 ax.YAxis(2).Color=racolor;
- 
+ax.XGrid='off';
+
 p=plot(bdates,brent_infl,'color',racolor,'linewidth',3);
-p.Color(4)=0.5;
+p.Color(4)=0.3;
 xl=xlim;
 xlim([xl(1) xl(2)+calmonths(3)]);
 
@@ -155,12 +162,13 @@ price_infl=price./sinfl;
 price_norm=price_infl/price_infl(ti)*brent_infl(bi);
 
 hold on
-plot(tdates,price_norm,'linestyle','-','linewidth',2,'color',[0.4660 0.6740 0.1880])
+p=plot(tdates,price_norm,'linestyle','-','linewidth',2,'color',[0.4660 0.6740 0.1880]);
 hold off
+p.Color(4)=0.4;
 
 
-lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','$OIH Normalized','fontsize',18);
-lgn.Position=[0.1312 0.7495 0.2702 0.1743];
+lgn=legend('Days Remaining','Brent Crude','$OIH Normalized','fontsize',18);
+lgn.Position=[0.1295 0.7924 0.2007 0.1324];
 
 %tstr=sprintf('U.S. Days Remaining, Brent in 2022 USD and $OIH\n for 2008 oil crash');%s',datestr(d2.dates(end),'yyyy mmm dd'));
 tstr=sprintf('U.S. Days Remaining, Brent and $OIH in 2022 USD');

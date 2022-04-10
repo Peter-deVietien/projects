@@ -9,14 +9,9 @@ series1='PET.RWTC.W';
 d1=process_weekly_data(dinit1);
 
 addpath('steo')
-filename='weekly_apr06.xls';
-[wdates,weekly_prod]=load_weekly_production(filename);
+filename='weekly_mar30.xls';
+[wdates,weekly_prod]=load_weekly_domestic(filename);
 
-%% Manual add
-eia_weekly_manual_data
-
-d1.dates=[d1.dates; mandates];
-d1.y=[d1.y; manbrent];
 
 %%
 leftycolor=[0 0.4470 0.7410];
@@ -73,16 +68,16 @@ ax.XGrid='off';
 ax.FontSize=22;
 
 lylbl=ylabel('Revenue [Millions 2022 USD]');
-lylbl.Position=[-1.53e+03 2.4e+04 -1];
+lylbl.Position=[-1.3e+03 1.5e+04 -1];
 
-tt=title(sprintf('U.S. Domestic + Other Crude Revenue\nTrailing %d Month 2022 USD',trailing_months),'fontsize',30);
+tt=title(sprintf('U.S. Domestic Crude Revenue\nTrailing %d Month 2022 USD',trailing_months),'fontsize',30);
 
 xl=xlim;
 
 xlim([xl(1) xl(2)+calmonths(3)])
 
 text(0.55,-0.11,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',17,'FontName','Times','units','normalized')
-text(0.005,0.02,'Daily Revenue = (Daily Domestic + Other Production) * $WTI in 2022 dollars','fontsize',16,'units','normalized')
+text(0.005,0.02,'Daily Revenue = Daily Domestic Production * $WTI in 2022 dollars','fontsize',16,'units','normalized')
 text(0.005,0.057,sprintf('Data includes %s',datestr(pridates(end),'mmm dd yyyy')),'fontsize',16,'units','normalized')
 %%
 print('~/projects/eia/post/trailing_crude_revenue_usa','-dpng')

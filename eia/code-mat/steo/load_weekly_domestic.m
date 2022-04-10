@@ -2,7 +2,7 @@ function [dates,production] = load_weekly_domestic(filename)
 
 filepath=sprintf('~/projects/eia/data/%s',filename);
 
-t=readtable(filepath,'Sheet','Data 3','Range','A3:P2090');
+t=readtable(filepath,'Sheet','Data 3','Range','A3:P2100');
 
 dates=t.Date;
 domestic_prod=t.x4_WeekAvgU_S_FieldProductionOfCrudeOil_ThousandBarrelsPerDay_;
