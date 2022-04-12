@@ -1,6 +1,10 @@
 function [dates,infl]=inflation_vs_t(dates)
 
-t=readtable('~/projects/mutual_code/CPIAUCSL.csv');
+if ispc
+    t=readtable('C:\Users\pdevi\Documents\GitHub\projects\mutual_code\CPIAUCSL.csv');
+else
+    t=readtable('~/projects/mutual_code/CPIAUCSL.csv');
+end
 
 cpi=t.CPIAUCSL;
 

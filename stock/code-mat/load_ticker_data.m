@@ -3,6 +3,11 @@ function d = load_ticker_data(ticker)
 d.mat_path=sprintf('~/projects/stock/data/%s_historical_prices.mat',ticker);
 d.csv_path=sprintf('~/projects/stock/data/%s_historical_prices.csv',ticker);
 
+if ispc
+    d.mat_path=sprintf('C:/Users/pdevi/Desktop/projects/stock/data/%s_historical_prices.mat',ticker);
+    d.csv_path=sprintf('C:/Users/pdevi/Desktop/projects/stock/data/%s_historical_prices.csv',ticker);
+end
+
 d.refresh_data=false;
 
 if exist(d.mat_path,'file')
@@ -18,8 +23,16 @@ else
 end
 
 if d.refresh_data
-    system(sprintf('/Users/peter/opt/anaconda3/bin/python3 ~/projects/stock/code-py/retrieve_price_data.py %s',ticker));
     
+    if ispc
+        pythonpath="%ProgramFiles%/WindowsApps/PythonSoftwareFoundation.Python.3.10_3.10.1264.0_x64__qbz5n2kfra8p0/python3.10.exe";
+        str=sprintf('"%s" C:/Users/pdevi/Desktop/projects/stock/code-py/retrieve_price_data.py %s',pythonpath,ticker);
+        system(str)
+    else
+        system(sprintf('/Users/peter/opt/anaconda3/bin/python3 ~/projects/stock/code-py/retrieve_price_data.py %s',ticker));
+
+    end
+
     fid=fopen(d.csv_path,'r');
 
     data=textscan(fid,'%D %f %f %f %f %f %f %f','Delimiter',',','HeaderLines',1);
