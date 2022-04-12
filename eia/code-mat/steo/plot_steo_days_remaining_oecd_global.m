@@ -1,7 +1,7 @@
 cca
 
-dirname_base={'mar22'};
-lgnnames={'STEO March 22'};
+dirname_base={'Apr22'};
+lgnnames={'STEO April 22'};
 
 nd=numel(dirname_base);
 
@@ -61,7 +61,7 @@ ax.YTick=yticks;
 fig=gcf;
 fig.Position=[95 191 941 675];
 
-xlim([datetime(2022,2,1) datetime(2024,1,1)])
+xlim([datetime(2019,1,1) datetime(2024,1,1)])
 ax.XAxis.TickLabelFormat='MMM yy';
 
 ttl=title('STEOs for Global Production and Consumption','fontsize',26);

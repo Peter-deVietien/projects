@@ -1,16 +1,7 @@
 cca
-%dirname_base={'jan21','feb21','mar21','apr21','may21','jun21','jul21','aug21','sep21','oct21','nov21','dec21','jan22'}
-%dirname_base={'jan21','mar21','may21','jul21','sep21','nov21','jan22'};
-%lgnnames={'Jan ''21','Mar ''21','May ''21','July ''21','Sep ''21','Nov ''21','Jan ''22'};
 
-dirname_base={'jan21','apr21','jul21','oct21','jan22'};
-lgnnames={'Jan ''21','Apr ''21','Jul ''21','Oct ''21','Jan ''22'};
-
-dirname_base={'mar21','sep21','feb22','mar22'}
-lgnnames={'STEO March 21','STEO September 21','STEO February 22','STEO March 22'};
-
-dirname_base={'feb22','mar22'};
-lgnnames={'STEO February 22','STEO March 22'};
+dirname_base={'mar22','apr22'};
+lgnnames={'STEO March 22','STEO April 22'};
 
 nd=numel(dirname_base);
 
@@ -35,8 +26,8 @@ p.Color(4)=0.2;
 p=plot(mpdates,mproduction,'linewidth',5,'color',prod_color);
 p.Color(4)=1;
 hold off
-lgs=[lgs {'February ''22 Production'}];
 lgs=[lgs {'March ''22 Production'}];
+lgs=[lgs {'April ''22 Production'}];
     
 
 
@@ -45,8 +36,8 @@ p=plot(fcdates,fconsumption,'linewidth',2,'color',consum_color);
 p.Color(4)=0.2;
 plot(mcdates,mconsumption,'linewidth',3,'color',consum_color)
 hold off
-lgs=[lgs {'February ''22 Consumption'}];
 lgs=[lgs {'March ''22 Consumption'}];
+lgs=[lgs {'April ''22 Consumption'}];
 
 
 

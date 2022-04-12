@@ -1,15 +1,7 @@
 cca
-%dirname_base={'jan21','feb21','mar21','apr21','may21','jun21','jul21','aug21','sep21','oct21','nov21','dec21','jan22'}
-dirname_base={'jan21','mar21','may21','jul21','sep21','nov21','jan22'};
-lgnnames={'Jan ''21','Mar ''21','May ''21','July ''21','Sep ''21','Nov ''21','Jan ''22'};
 
-
-dirname_base={'feb21','aug21','feb22'}
-lgnnames={'STEO February 21','STEO August 21','STEO February 22'};
-
-dirname_base={'mar21','sep21','feb22','mar22'}
-lgnnames={'STEO March 21','STEO September 21','STEO February 22','STEO March 22'};
-
+dirname_base={'apr21','oct21','apr22'};
+lgnnames={'April ''21','October ''21','April ''22'};
 
 nd=numel(dirname_base);
 
@@ -37,7 +29,7 @@ end
 grid on
 
 ax=gca;
-ax.FontSize=18;
+ax.FontSize=22;
 
 yliml=ylim;
 ylbl=ylabel('OECD Commercial Inventory [mb]');
@@ -93,10 +85,12 @@ end
 
 
 %%
-lgn=legend(lgnnames,'fontsize',20);
-lgn.Position=[0.6291 0.6926 0.2184 0.1141];
+lgn=legend(lgnnames,'fontsize',22);
+%lgn.Position=[0.6291 0.6926 0.2184 0.1141];
 
 
+text(0.3,0.15,['600mb drop Aug ''20 - Feb ''22',...
+    newline,'=',newline,'1.1mbpd draw for 18 months for OECD'],'units','normalized','fontsize',22,'horizontalalignment','center');
 
 
 %%

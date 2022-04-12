@@ -1,20 +1,10 @@
 cca
-%dirname_base={'jan21','feb21','mar21','apr21','may21','jun21','jul21','aug21','sep21','oct21','nov21','dec21','jan22'}
-%dirname_base={'jan21','mar21','may21','jul21','sep21','nov21','jan22'};
-%lgnnames={'Jan ''21','Mar ''21','May ''21','July ''21','Sep ''21','Nov ''21','Jan ''22'};
 
-dirname_base={'jan21','apr21','jul21','oct21','jan22'};
-lgnnames={'Jan ''21','Apr ''21','Jul ''21','Oct ''21','Jan ''22'};
+dirname_base={'apr21','oct21','apr22'};
+lgnnames={'April ''21','October ''21','April ''22'};
 
-
-dirname_base={'feb21','apr21','jun21','aug21','oct21','dec21','jan22','feb22'}
-lgnnames={'Feb ''21','Apr ''21','Jun ''21','Aug ''21','Oct ''21','Dec ''21','Jan ''22','Feb ''22'};
-
-dirname_base={'feb21','aug21','feb22'}
-lgnnames={'February ''21 STEO','August ''21 STEO','February ''22 STEO'};
-
-dirname_base={'mar21','sep21','mar22'}
-lgnnames={'STEO March 21','STEO September 21','STEO March 22'};
+dirname_base={'mar22','apr22'};
+lgnnames={'March ''22','April ''22'};
 
 
 nd=numel(dirname_base);
@@ -72,14 +62,12 @@ eia_weekly_manual_data
 d.dates=[d.dates; mandates];
 d.y=[d.y;maninventoriesnospr];
 
-
+%% 
 ind=find(d.dates>datetime(2017,1,1),1,'first');
 d.dates=d.dates(ind:end);
 d.y=d.y(ind:end)/1000;
 
-
-
-
+%%
 hold on
 plot(d.dates,d.y,'linewidth',3,'color','m')
 hold off
@@ -96,7 +84,7 @@ ax=gca;
 ax.YAxis(2).Exponent=0;
 
 ax.YTick=yticks;
-
+ax.FontSize=20;
 
 
 %% Adornments
@@ -111,8 +99,6 @@ tndays=days(tdays-tdays(1));
 
 [yo,mo,x,bo]=least_squares(tndays,ty);
 
-
-
 hold on
 p=plot(sdate+tndays,yo,'linewidth',6,'linestyle','-','color',[0.3010 0.7450 0.9330]);
 hold off
@@ -124,21 +110,18 @@ end
 
 %%
 xlim([datetime(2019,6,1) datetime(2022,12,1)])
-%xticks=[datetime(2018,1,1):calmonths(24):datetime(2022,1,1)];
-%ax.XTick=xticks;
 
 fig=gcf;
 fig.Position=[95 191 941 675];
 
 lastdatestr='April 6th';
-title_str=sprintf('U.S. Commercial Crude and Product Inventories\nIncludes %s EIA Release',lastdatestr);
+title_str=sprintf('U.S. Commercial Crude and Product Inventories\nIncludes %s Weekly EIA Release',lastdatestr);
 ttl=title(title_str,'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
 
 lgn=legend(lgnnames);
-%lgn.Position=[0.6020 0.6152 0.1716 0.1785];
 lgn.FontSize=22;
-lgn.Position=[0.5818 0.7488 0.3231 0.1622];
+%lgn.Position=[0.5818 0.7488 0.3231 0.1622];
 
 text(0.2,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',18,'units','normalized')
 

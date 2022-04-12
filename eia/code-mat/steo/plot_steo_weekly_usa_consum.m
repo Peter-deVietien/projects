@@ -10,8 +10,8 @@ cca
 %dirname_base={'feb21','apr21','jun21','aug21','oct21','dec21','jan22','feb22'}
 %lgnnames={'Feb ''21','Apr ''21','Jun ''21','Aug ''21','Oct ''21','Dec ''21','Jan ''22','Feb ''22'};
 
-dirname_base={'mar22'};
-lgnnames={'March 2022 STEO'};
+dirname_base={'mar22','apr22'};
+lgnnames={'March 2022 STEO','April 2022 STEO'};
 
 
 nd=numel(dirname_base);
@@ -72,19 +72,20 @@ d.y=d.y(ind:end)/1000;
 
 
 hold on
-plot(d.dates,d.y,'linewidth',3,'color',[0.8500 0.3250 0.0980 0.5])
+%plot(d.dates,d.y,'linewidth',3,'color',[0.8500 0.3250 0.0980 0.5])
 hold off
-lgnnames=[lgnnames {'4 Week Average Product Supplied'}];
+%lgnnames=[lgnnames {'4 Week Average Product Supplied'}];
 
 
 yticks=[17:0.5:23];
-ylim([17 23])
+y_lim=[17 22];
+ylim(y_lim)
 ax.YTick=yticks;
 
 ytickformat('%,.1f')
 
 yyaxis right
-ylim(yliml)
+ylim(y_lim)
 ax.YAxis(2).Color='k';
 ax=gca;
 ax.YTick=yticks;
@@ -107,17 +108,18 @@ fig=gcf;
 fig.Position=[95 191 941 675];
 
 title_str=sprintf('U.S. Total Product Consumption\nMarch STEO vs 4 Week Avg EIA Data');
+title_str=['March vs April STEO U.S. Consumption'];
 ttl=title(title_str,'fontsize',22);
 %ttl.Position(2)=3.3131e+03;
 
-lgn=legend(lgnnames,'fontsize',18);
-lgn.Position=[0.1301 0.8423 0.3379 0.0704];
+lgn=legend(lgnnames,'fontsize',22);
+%lgn.Position=[0.1301 0.8423 0.3379 0.0704];
 
 ylim([17 23])
 xlim([datetime(2019,1,1) datetime(2022,12,1)])
 
 
-text(0.42,0.025,sprintf('Weekly includes data for week ending %s',datestr(d.dates(end))),'units','normalized','fontsize',18)
+%text(0.42,0.025,sprintf('Weekly includes data for week ending %s',datestr(d.dates(end))),'units','normalized','fontsize',18)
 
 
 text(0.25,-0.1,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',16,'units','normalized')
