@@ -3,13 +3,16 @@ cca
 %%
 series_key1='INTL.44-2-WORL-TJ.A';
 series_key2='INTL.5-2-WORL-TBPD.A';
-
+series_key3='IEO.2021.REFERENCE.CNSM_PE_WOR_QBTU.A';
 %%
 [dinit1,metadata1]=load_eia_series(series_key1);
 d1=process_annual_data(dinit1);
 
 [dinit2,metadata2]=load_eia_series(series_key2);
 d2=process_annual_data(dinit2);
+
+[dinit3,metadata3]=load_eia_series(series_key3);
+d3=process_annual_data(dinit3);
 
 %%
 leftycolor=[0 0.4470 0.7410];
@@ -23,6 +26,8 @@ tj_vs_t=d1.y;
 boe_vs_t=tj_vs_t/tj_per_boe;
 mboe_vs_t=boe_vs_t/1e6;
 mboepd_vs_t=mboe_vs_t/365;
+
+mboepd_ieo=quadbtu_to_mboe(d3.y)/365;
 
 %%
 plot(d1.dates,mboepd_vs_t,'linewidth',6,'color',leftycolor)
