@@ -1,0 +1,16 @@
+%function load_shiller_sp500
+cca
+
+warning('off','MATLAB:table:ModifiedAndSavedVarnames')
+k=readtable('data/shiller_sp500.xls.xls','Sheet','Data','Range','A8:L3000');
+
+%% Remove nans
+ind=isnan(k.Date)
+k(ind,:)=[];
+
+year=round(k.Date,0);
+month=
+
+
+dates=datetime(k.Date)
+price=k.P;

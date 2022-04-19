@@ -2,7 +2,7 @@ clear
 close all
 
 %%
-load_sp500_energy_revenue
+[dates,revenue]=load_sp500_energy_revenue;
 d=load_ticker_data('OIH');
 d.price=smoothdata(d.price,'gaussian',20);
 %%

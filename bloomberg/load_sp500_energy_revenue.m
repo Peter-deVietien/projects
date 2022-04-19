@@ -1,5 +1,4 @@
-clear
-close all
+function [dates,revenue]=load_sp500_energy_revenue()
 
 %%
 warning('off','MATLAB:table:ModifiedAndSavedVarnames')

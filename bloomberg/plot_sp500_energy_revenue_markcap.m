@@ -2,7 +2,7 @@ clear
 close all
 
 %%
-load_sp500_energy_revenue
+[dates,revenue]=load_sp500_energy_revenue;
 [mdates,markcap]=load_sp500_energy_markcap();
 
 [~,rinfl]=inflation_vs_t(dates);
