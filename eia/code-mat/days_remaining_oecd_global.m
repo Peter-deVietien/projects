@@ -17,7 +17,7 @@ d2.dates=d2.dates(sind:end);
 d2.y=d2.y(sind:end);
 
 
-eind=find(d1.dates==datetime(2022,2,1));
+eind=find(d1.dates==datetime(2022,3,1));
 
 d1.dates=d1.dates(1:eind);
 d1.y=d1.y(1:eind);
@@ -52,9 +52,9 @@ fig.Position=[144 341 892 525];
 
 ylbl=ylabel('Days Remaining');
 ylbl.Position=[-50 31.5000 -1.0000];
-yt=ax.YTick;
 yl=[25 38];
 ylim(yl)
+yt=ax.YTick;
 
 yyaxis right
 
@@ -69,7 +69,7 @@ nk=numel(k);
 %for i = 1:1
     %fname=k{i};
     
-    tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nMarch STEO:  February Last Data on Plot');
+    tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nApril STEO:  March Last Data on Plot');
     tt=title(tstr);
     tt.Position(2)=34.9;
     tt.Position(1)=3.300e+03;
@@ -80,7 +80,7 @@ nk=numel(k);
  %   print(sprintf('fonts/%s',fname),'-dpng')
 %end
 
-text(0.5,-0.1,'Twitter: @peterdevietien   Data: March STEO','fontsize',17,'units','normalized')
+text(0.5,-0.1,'Twitter: @peterdevietien   Data: April STEO','fontsize',17,'units','normalized')
 
 %%
 filename='days-remaining-oecd-global';

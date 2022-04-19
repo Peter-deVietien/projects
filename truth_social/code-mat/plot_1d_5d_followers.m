@@ -33,10 +33,13 @@ lsdates2=dates2(1)+x;
 
 b1=bar(bardates1,barfollowers1,'b');
 b1.EdgeColor='b';
+b1.BarWidth=min(b1.BarWidth,0.1);
+
 hold on
 b2=bar(dates2,followers2,'g');
 b2.BarWidth=min(b2.BarWidth,0.1);
 b2.EdgeColor='g';
+
 p(1)=plot(lsdates1,y1,'b','linewidth',3);
 p(1).Color(4)=0.2;
 p(2)=plot(lsdates2,y2,'g','linewidth',3);

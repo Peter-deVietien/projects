@@ -7,6 +7,9 @@
 *.mat
 *.png
 .DS_Store
+
 !mutual_code/CPIAUCSL.csv
+!eia/data/*
+!eia/data/steo/*
 !bloomberg/*
 !bloomberg/*/*

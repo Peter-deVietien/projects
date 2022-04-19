@@ -10,6 +10,10 @@ lgnnames={'Feb ''21','Apr ''21','Jun ''21','Aug ''21','Oct ''21','Dec ''21','Jan
 dirname_base={'mar21','sep21','feb22','mar22'}
 lgnnames={'STEO March 21','STEO September 21','STEO February 22','STEO March 22'};
 
+dirname_base={'Mar22','apr22'};
+lgnnames={'March ''22','April ''22'};
+
+
 
 nd=numel(dirname_base);
 
