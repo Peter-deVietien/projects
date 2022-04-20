@@ -5,6 +5,13 @@ close all
 [dates,revenue]=load_sp500_energy_revenue;
 [mdates,markcap]=load_sp500_energy_markcap();
 
+%%
+eind=4;
+dates=dates(1:end-eind);
+revenue=revenue(1:end-eind);
+% mdates=mdates(1:end-eind);
+% markcap=markcap(1:end-eind);
+
 [~,rinfl]=inflation_vs_t(dates);
 [~,minfl]=inflation_vs_t(mdates);
 %%
@@ -38,6 +45,9 @@ title(['S&P500 Energy Revenue and Market Cap',newline,'Inflation Adjusted to 202
 xl=xlim;
 xlim([xl(1) xl(2)+calmonths(6)])
 
-text(0.51,-0.12,'Twitter: @peterdevietien   Data: Bloomberg','fontsize',14,'units','normalized')
+t1=text(0.3,0.12,'Last Market Cap Data: April 1st 2022','fontsize',11','units','normalized');
+t2=text(0.3,0.07,'Last Revenue Data: Dec 31st 2021','fontsize',11','units','normalized');
+
+t3=text(0.572,-0.12,'Twitter: @peterdevietien   Data: Bloomberg','fontsize',12,'units','normalized');
 
 print('post\sp500_energy_revenue_markcap','-dpng')
