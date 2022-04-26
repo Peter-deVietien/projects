@@ -18,7 +18,7 @@ oncompanies=numel(ticker);
 %% Establish filters
 filt_markcap=4e9;
 filt_debtasset=15;
-filt_evsales=14;
+filt_evsales=4;
 filt_rev=1e9;
 filt_revyoy=20;
 filt_eps=0;
