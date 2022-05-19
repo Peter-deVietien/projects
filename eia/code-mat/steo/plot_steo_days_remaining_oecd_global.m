@@ -1,7 +1,7 @@
 cca
 
-dirname_base={'Apr22'};
-lgnnames={'STEO April 22'};
+dirname_base={'may22'};
+lgnnames={'STEO May 22'};
 
 nd=numel(dirname_base);
 

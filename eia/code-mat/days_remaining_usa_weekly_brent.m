@@ -53,10 +53,15 @@ d3.y=[d3.y; manbrent];
 days_remaining=d1.y./d2.y;
 
 %%
+
+scale=2;
+fig=figure;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
 lacolor=[0 0.4470 0.7410];
 
-p=plot(d1.dates,days_remaining,'linewidth',3,'color',lacolor);
-p.Color(4)=0.5;
+p=plot(d1.dates,days_remaining,'linewidth',1,'color',lacolor);
+p.Color(4)=0.8;
 
 hold on
 p=plot([d1.dates(1) d1.dates(end)],[1 1]*days_remaining(end),'color','b');
@@ -65,92 +70,54 @@ hold off
 grid on
 
 ax=gca;
-ax.FontSize=18;
+ax.FontSize=14;
 ax.GridAlpha=0.3;
 
-fig=gcf;
-fig.Position=[46 330 990 536];
 
 ylim([65 115])
-
-%%
 
 ylabel('Days Remaining')
 
 yt=ax.YTick;
 yl=ylim;
 
-
+%%
 
 yyaxis right
 ax.YAxis(1).Color=lacolor;
-
-
-%%
-
-t=readtable('~/projects/eia/data/CPIAUCSL.csv');
-
-t.DATE(end+1)=t.DATE(end)+calmonths(1);
-t.CPIAUCSL(end)=t.CPIAUCSL(end-1)/t.CPIAUCSL(end-2)*t.CPIAUCSL(end-1);
-
-t.DATE(end+1)=t.DATE(end)+calmonths(1);
-t.CPIAUCSL(end)=t.CPIAUCSL(end-1)/t.CPIAUCSL(end-2)*t.CPIAUCSL(end-1);
-
-t.DATE(end+1)=t.DATE(end)+calmonths(1);
-t.CPIAUCSL(end)=t.CPIAUCSL(end-1)/t.CPIAUCSL(end-2)*t.CPIAUCSL(end-1);
-
-idate=t.DATE;
-infl=t.CPIAUCSL/t.CPIAUCSL(end);
-
-%%
 
 %%
 dates=d3.dates;
 brent=d3.y;
 
-%%
-dates=[dates;datetime(2022,3,1)];
-brent=[brent;110];
+[~,infl]=inflation_vs_t(dates);
 
-ddays=days(dates(1)-idate(1));
-sdays=days(dates-dates(1));
-sidays=days(idate-idate(1))-ddays;
-
-sinfl=spline(sidays,infl,sdays);
-
-brent_infl=brent./sinfl;
-
-%brent=moving_average(dates,brent,20);
-%brent_infl=moving_average(dates,brent_infl,20);
+brent_infl=brent./infl;
 
 %%
 racolor=[0.8500 0.3250 0.0980 1];
 ax.YAxis(2).Color=racolor;
 ax.XGrid='off';
+
  
-p=plot(dates,brent_infl,'color',racolor,'linewidth',3);
-p.Color(4)=0.5;
+p=plot(dates,brent_infl,'color',racolor,'linewidth',1);
+p.Color(4)=0.8;
 xl=xlim;
 xlim([datetime(1995,1,1) xl(2)+calmonths(6)]);
-
-%xlim([datetime(2006,1,1)  datetime(2010,1,1)])
+ax.YTick=[0:25:200];
 
 ylabel('Brent [2022 USD]')
 
-lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',18);
-lgn.Position=[0.1295 0.7342 0.2434 0.1321];
+lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',11);
+lgn.Position=[0.1442 0.6160 0.2725 0.1306];
 
-tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes April 6th Release');%s',datestr(d2.dates(end),'yyyy mmm dd'));
+tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes May 18th Release');
 tt=title(tstr);
-%tt.Position(2)=125;
-%tt.Position(1)=3.300e+03;
-tt.FontSize=24;
+tt.FontName='Arial Unicode MS';
+tt.Position=[6.3999e+03 107.2958 -0.5000];
 
-tt.FontName='Arial Unicode MS';%fname;
-
-text(0.42,0.02,'Total Inventory incl. SPR / 4 Wk Average Total Product Consumed','fontsize',15,'units','normalized')
-%text(0.62,-0.105,'Twitter: @peterdevietien   Data: EIA','fontsize',17,'units','normalized')
-text(0.42,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA','fontsize',17,'units','normalized')
+t1=text(0.01,0.03,'Days Remaining = Total Inventory incl. SPR / 4 Wk Average Total Product Consumed','fontsize',12,'units','normalized');
+t2=text(0.42,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA','fontsize',11,'units','normalized');
 
 %%
 filename='days-remaining-usa-weekly-brent';

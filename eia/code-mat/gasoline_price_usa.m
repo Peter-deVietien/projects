@@ -1,7 +1,7 @@
 cca
 
 %%
-series1='PET.EMM_EPM0_PTE_NUS_DPG.W';
+series1='PET.EMM_EPMR_PTE_NUS_DPG.W';
 %%
 [dinit1,metadata]=load_eia_series(series1);
 d1=process_weekly_data(dinit1);
@@ -15,15 +15,16 @@ rightycolor=[0.8500 0.3250 0.0980];
 petro_infl=d1.y./infl;
 %%
 
-fig=gcf;
-fig.Position=[125 385 1007 550];
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
 
-plot(dates,petro_infl,'linewidth',3,'color',leftycolor)
+plot(dates,petro_infl,'linewidth',2,'color',leftycolor)
 
 grid on
 
 ax=gca;
-ax.FontSize=22;
+ax.FontSize=16;
 y_lim=[1.5 6];
 ylim(y_lim);
 yticks=[1:6];
@@ -48,7 +49,7 @@ ax.YTickLabel=yticklbl;
 ax.XTick=[datetime(2001,1,1):calyears(4):datetime(2025,1,1)]
 
 ax.Position=[0.1271 0.1200 0.7779 0.7340];
-tt=title(sprintf('U.S. Gasoline Prices [2022 USD]'),'fontsize',30);
+tt=title(sprintf('U.S. Gasoline Prices [2022 USD]'),'fontsize',18);
 
 
 %%
@@ -64,10 +65,10 @@ if 1
    plot([datetime(2025,1,1) datetime(2021,1,1)],[0 80000],'r-','linewidth',2)    
    hold off
 
-   text(datetime(2003,1,1),5.7,'Bush','fontsize',35,'fontname','Times')
-   text(datetime(2011,1,1),5.7,'Obama','fontsize',35,'fontname','Times')
-   text(datetime(2017,9,1),5.7,'Trump','fontsize',35,'fontname','Times')
-   text(datetime(2021,9,1),5.7,'Biden','fontsize',35,'fontname','Times')
+   text(datetime(2003,1,1),5.7,'Bush','fontsize',20,'fontname','Times')
+   text(datetime(2012,1,1),5.7,'Obama','fontsize',20,'fontname','Times')
+   text(datetime(2018,1,1),5.7,'Trump','fontsize',20,'fontname','Times')
+   text(datetime(2022,4,1),5.7,'Biden','fontsize',20,'fontname','Times')
    
    xlim([datetime(2009,1,1) datetime(2025,1,1)])
 
@@ -75,8 +76,10 @@ end
 
 
 
-text(datetime(2021,3,1),1.65,sprintf('Last: %s',datestr(d1.dates(end),'dd mmm ''yy')),'fontsize',17)
-text(0.55,-0.11,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',17,'FontName','Times','units','normalized')
+t1=text(datetime(2021,3,1),1.65,sprintf('Last: %s',datestr(d1.dates(end),'dd mmm ''yy')),'fontsize',12);
+t1.Position=[1.1269e+04 1.6500 0];
+t2=text(0.55,-0.11,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',12,'FontName','Times','units','normalized');
+t2.Position=[0.4750 -0.1342 0];
 
 %%
 print('~/projects/eia/post/gasoline_price_usa','-dpng')

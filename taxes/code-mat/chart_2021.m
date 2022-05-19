@@ -66,5 +66,27 @@ mtotals(:,tsla)=[];
 usecname(tsla)=[];
 
 
+for i=1:size(mtotals,1)
+    mtotals(i,end)=sum(mtotals(i,1:end-1));
+end
+
+mtotals(end,2:end)=0.7*mtotals(end,2:end);
+
+sel=mtotals(:,end)>1e6;
+
+mtotals(sel,end)=max(mtotals(sel,2:end-1),[],2);
+
+%%
+figure
+plot(mtotals)
+
+legend(usecname)
+
+figure
+b=bar([1:46],mtotals(end,:));
+ax=gca;
+ax.XTick=[1:46];
+ax.XTickLabel=usecname;
+
 csvwrite_with_headers('../post/2021_holdings.csv',mtotals,usecname)
 

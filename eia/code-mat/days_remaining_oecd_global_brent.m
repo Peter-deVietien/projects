@@ -25,7 +25,7 @@ d2.dates=d2.dates(sind:end);
 d2.y=d2.y(sind:end);
 
 
-eind=find(d1.dates==datetime(2022,3,1));
+eind=find(d1.dates>datetime(2022,4,20),1);
 
 d1.dates=d1.dates(1:eind);
 d1.y=d1.y(1:eind);
@@ -33,8 +33,6 @@ d1.y=d1.y(1:eind);
 d2.dates=d2.dates(1:eind);
 d2.y=d2.y(1:eind);
 
-d1.dates=d1.dates+calmonths(1);
-d2.dates=d2.dates+calmonths(1);
 %%
 days_remaining=d1.y./d2.y;
 
@@ -100,7 +98,7 @@ nk=numel(k);
  %   print(sprintf('fonts/%s',fname),'-dpng')
 %end
 
-text(0.01,0.02,'Last Data: March 2022 from April STEO','fontsize',16,'units','normalized')
+text(0.01,0.02,'Last Data: April 2022 from May STEO','fontsize',16,'units','normalized')
 text(0.37,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA, STEO','fontsize',16,'units','normalized')
 
 %%

@@ -25,10 +25,13 @@ fig=gcf;
 fig.Position=[476 330 709 536];
 
 yl=ylim;
-ylim([480 850]+60)
+%ylim([0 ])
+
+xl=xlim;
+xlim([xl(1) xl(2)+caldays(3)])
 
 
-text(0.15,-0.1,'Twitter: @peterdevietien   Data: Truth Social','fontsize',18,'units','normalized')
+text(0.15,-0.1,'Twitter: @peterdevietien   Data: Truth Social','fontsize',16,'units','normalized')
 
 %%
 print('~/projects/truth_social/post/trump_followers','-dpng')

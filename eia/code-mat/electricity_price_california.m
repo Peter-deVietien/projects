@@ -14,6 +14,11 @@ d2=process_quarterly_data(dinit2);
 leftycolor=[0 0.4470 0.7410];
 rightycolor=[0.8500 0.3250 0.0980];
 %%
+
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
 ind=4*5;
 d2.y=d2.y./d2.y(ind)*d1.y(ind);
 
@@ -21,37 +26,32 @@ d1.dates=d1.dates+calmonths(3);
 d2.dates=d2.dates+calmonths(3);
 
 %%
-plot(d1.dates,d1.y,'linewidth',4,'color',leftycolor)
+plot(d1.dates,d1.y,'linewidth',3,'color',leftycolor)
 
 hold on
-plot(d2.dates,d2.y,'linewidth',4,'color',rightycolor)
+plot(d2.dates,d2.y,'linewidth',3,'color',rightycolor)
 hold off
 
 grid on
 
 ax=gca;
-ax.FontSize=22;
+ax.FontSize=16;
 ax.XGrid='off';
 
-fig=gcf;
-fig.Position=[203 311 1174 555];
 
 ylabel('Cents per kWh')
 
-tt=title(sprintf('Price of Calfornia Electricity vs U.S. Average'),'fontsize',30);
-%tt.Position=[3.1072e+03 9.110 1.4211e-14];
+%tt=title(sprintf('Price of Calfornia Electricity vs U.S. Average'),'fontsize',20);
 
-%lgn=legend('California','U.S. Average (normalized)');
-%lgn.Position=[0.1508 0.8063 0.2304 0.0928];
 
-t=text(0.62,0.83,sprintf('California Electricity\nPrice'),'fontsize',40,'units','normalized','color',leftycolor,'horizontalalignment','center');
-t2=text(0.59,0.2,'U.S. Average','fontsize',40,'units','normalized','color',rightycolor);
+t1=text(0.5791,0.7461,sprintf('California Electricity\nPrice'),'fontsize',20,'units','normalized','color',leftycolor,'horizontalalignment','center','fontweight','light');
+t2=text(0.4976,0.2261,'U.S. Average','fontsize',20,'units','normalized','color',rightycolor,'fontweight','light');
+t3=text(0.6204,-0.1075,'Twitter: @peterdevietien   Data: EIA','fontsize',12,'FontName','Times','units','normalized');
 
 %%
 
 xlim([d2.dates(ind) d2.dates(end)+calmonths(12)])
 
-text(0.7,-0.1,'Twitter: @peterdevietien   Data: EIA','fontsize',17,'FontName','Times','units','normalized')
 
 %%
 print('~/projects/eia/post/electricity_price_california','-dpng')

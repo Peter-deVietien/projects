@@ -126,7 +126,7 @@ for i=1:nc
      hTxt(1,1)=text(70.7,28100,{'Daily Deaths'},'FontSize',22,'color',ddcolor,'fontweight','bold');
      hTxt(2,1)=text(120.0,34500,{sprintf('Paxlovid \nDeliveries')},'FontSize',20,'color',paxcolor,'fontweight','bold');
      hTxt(3,1)=text(12.65,4970,{'Daily Hospitalizations'},'FontSize',24,'color',hospcolor,'fontweight','bold');
-     hTxt(4,1)=text(121.86,19400,{'Plateaus at 100k/day'},'FontSize',17,'rotation',63,'color',paxcolor);
+     hTxt(4,1)=text(118,19600,{'Plateaus at 100k/day'},'FontSize',17,'rotation',63,'color',paxcolor);
     
     
     %

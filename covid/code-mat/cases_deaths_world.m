@@ -75,17 +75,17 @@ for i=1:nc
     title(t_str)
     
     fig=gcf;
-    fig.Position=[476 212 1019 654];
+    fig.Position=[602 338 893 528];
     
     lgn=legend('7 Day Avg Cases','7 Day Avg Deaths');
-    lgn.Position=[0.1295 0.7958 0.1825 0.0742];
+    lgn.Position=[0.1558 0.7377 0.2083 0.0919];
     
     x_lim=xlim;
     xlim([x_lim(1) x_lim(2)+days(5)])
     
     %% Extra Adornments
     y_lim=ylim;
-    text(0.45,-0.1,'Twitter: @peterdevietien    Data from @OurWorldInData','fontsize',18,'units','normalized')
+    txt=text(0.50,-0.107,'Twitter: @peterdevietien    Data from @OurWorldInData','fontsize',14,'units','normalized');
     
     %%
     printstr=sprintf('~/projects/covid/post/omicron/cases-deaths-%s',country);

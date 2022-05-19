@@ -71,7 +71,7 @@ casesma=dspline(dates,casesma,dates);
 
 %% Put max on day 80;
 [cmax,mind]=max(casesma);
-ndays=days(dates-dates(1))+58-mind;
+ndays=days(dates-dates(1))+65-mind;
 
 hold on
 plot(ndays,casesma/cmax/3,'linewidth',4,'color','red');

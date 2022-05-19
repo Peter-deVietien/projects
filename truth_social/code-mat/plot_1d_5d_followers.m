@@ -3,17 +3,17 @@ cca
 load_dt_followers
 
 %%
-ndays1=5;
-ndays2=2;
+ndays1=30;
+ndays2=7;
 
-ind1=find(dates>(dates(end)-ndays1),1,'first');
-ind2=find(dates>(dates(end)-ndays2),1,'first');
+sel1=dates<datetime(2022,4,21);
+sel2=dates>datetime(2022,4,22);
 
-dates1=dates(ind1:end);
-dates2=dates(ind2:end);
+dates1=dates(sel1);
+dates2=dates(sel2);
 
-followers1=followers(ind1:end);
-followers2=followers(ind2:end);
+followers1=followers(sel1);
+followers2=followers(sel2);
 
 ndays1=days(dates1-dates1(1));
 ndays2=days(dates2-dates2(1));
@@ -21,10 +21,10 @@ ndays2=days(dates2-dates2(1));
 [yo1,mo1,x1,bo1]=least_squares(ndays1,followers1);
 [yo2,mo2,x2,bo2]=least_squares(ndays2,followers2);
 
-bardates1=dates1(1:end-numel(dates2));
-barfollowers1=followers1(1:end-numel(dates2));
+bardates1=dates1;
+barfollowers1=followers1;
 
-x=[-5:0.1:10];
+x=[-25:0.1:80];
 y1=mo1*x+bo1;
 lsdates1=dates1(1)+x;
 
@@ -49,18 +49,14 @@ hold off
 %%
 
 %per_hour1=sprintf('%.0f,%3.0f',mo/24,mod(mo*1000/24,1000));
-per_hour1=num2cstr(round(mo1*1000/24,0));
-per_hour2=num2cstr(round(mo2*1000/24,0));
+per_hour1=num2cstr(round(mo1*1000,0));
+per_hour2=num2cstr(round(mo2*1000,0));
 
 
 %%
 grid on
 ax=gca;
 ax.FontSize=20;
-ax.XAxis.TickLabelFormat='MMM dd';
-
-
-
 
 ylabel('Trump Followers [thousands]')
 
@@ -70,15 +66,19 @@ fig=gcf;
 fig.Position=[476 330 709 536];
 
 yl=ylim;
-ylim([580 850]+120)
+ylim([0 3600])
 
-xlim([dates1(1)-days(1) dates1(end)+days(3)])
+xlim([dates1(1)-days(2) dates2(end)+days(18)])
 
-lgn=legend(p,sprintf('New Followers Per Hour, Past 5 Days: %s',per_hour1),sprintf('New Followers Per Hour, Past Day: %s',per_hour2));
-lgn.Position=[0.1291 0.8197 0.5416 0.1051];
-text(0.33,0.82,sprintf('40,000/hr needed for 1m/day'),'fontsize',20,'units','normalized','horizontalalignment','center')
+ax=gca;
+ax.XTick=[datetime(2022,3,1),datetime(2022,3,15),datetime(2022,4,1),datetime(2022,4,15),datetime(2022,5,1),datetime(2022,5,15)];
+ax.XTickLabel=datestr(ax.XTick,'mmm dd');
 
-text(0.15,-0.1,'Twitter: @peterdevietien   Data: Truth Social','fontsize',18,'units','normalized')
+lgn=legend(p,sprintf('New Followers per Day, Before 4/20: %s',per_hour1),sprintf('New Followers per Day, After 4/20: %s',per_hour2));
+lgn.Position=[0.1291 0.8197 0.5783 0.1051];
+%text(0.33,0.82,sprintf('40,000/hr needed for 1m/day'),'fontsize',20,'units','normalized','horizontalalignment','center')
+
+t=text(0.465,-0.107,'Twitter: @peterdevietien   Data: Truth Social','fontsize',15,'units','normalized');
 
 %%
-print('~/projects/truth_social/post/trump_followers','-dpng')
+print('~/projects/truth_social/post/trump_1d_5d_followers','-dpng')

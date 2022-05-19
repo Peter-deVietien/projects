@@ -1,9 +1,9 @@
 
-mandates=[datetime(2022,4,1)];
+mandates=[datetime(2022,5,13)];
 
-maninventories=[1.7084e6];
-maninventoriesnospr=[1.1438e6];
+maninventories=[1691.4]*1000;
+maninventoriesnospr=[1153.4]*1000;
 
-mantotal_product_4wk=[20366];
+mantotal_product_4wk=[19545];
 
-manbrent=[104];
+manbrent=[113];

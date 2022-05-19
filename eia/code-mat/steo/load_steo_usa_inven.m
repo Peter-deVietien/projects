@@ -1,14 +1,28 @@
-function [dates,oecd_inv] = load_steo_usa_inven(filename)
+function [dates,usa_inv,spr_inv] = load_steo_usa_inven(filename)
 
 filepath=sprintf('~/projects/eia/data/steo/%s',filename);
 
 t=readtable(filepath,'Sheet','3atab','Range','C45:BV45');
+t2=readtable(filepath,'Sheet','4atab','Range','C63:BV63');
+
+if isnan(t2{1,1})
+    t2=readtable(filepath,'Sheet','4atab','Range','C62:BV62');
+end
+
 
 tt=rows2vars(t);
-oecd_inv=tt.Var1;
+usa_inv=tt.Var1;
 
-nanind=isnan(oecd_inv);
-oecd_inv(nanind)=[];
+nanind=isnan(usa_inv);
+usa_inv(nanind)=[];
+
+
+tt2=rows2vars(t2);
+spr_inv=tt2.Var1;
+
+nanind=isnan(spr_inv);
+spr_inv(nanind)=[];
+
 
 %%
 last_year=23 + 2000;

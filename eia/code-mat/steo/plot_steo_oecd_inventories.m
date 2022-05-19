@@ -1,7 +1,11 @@
 cca
 
-dirname_base={'apr21','oct21','apr22'};
-lgnnames={'April ''21','October ''21','April ''22'};
+dirname_base={'may21','nov21','may22'};
+lgnnames={'May ''21','November ''21','May ''22'};
+
+dirname_base={'apr22','may22'};
+lgnnames={'April ''22 STEO','May ''22 STEO'};
+
 
 nd=numel(dirname_base);
 
@@ -9,19 +13,19 @@ for i=1:nd
     dirnames{i}=[dirname_base{i},'_base.xlsx'];
 end
 
+scale=2;
+fig=figure;
+fig.Position=[75.8000 342 1200/scale 675/scale];
 
-lgs=[];
+
 for i=1:nd
     [dates,inven]=load_steo_oecd_inven(dirnames{i});
     disp(inven(end))
     
     %% Get month/year
-    
-
     hold on
     plot(dates,inven,'linewidth',3)
     hold off
-    lgs=[lgs {dirname_base{i}}];
     
 end
 
@@ -29,11 +33,11 @@ end
 grid on
 
 ax=gca;
-ax.FontSize=22;
+ax.FontSize=16;
 
 yliml=ylim;
 ylbl=ylabel('OECD Commercial Inventory [mb]');
-ylbl.Position(1)=-240;
+%ylbl.Position(1)=-240;
 
     
 ytickformat('%,.0d')
@@ -49,48 +53,21 @@ ytickformat('%,.0d')
 ax=gca;
 ax.YAxis(2).Exponent=0;
 
-fig=gcf;
-fig.Position=[95 191 941 675];
+ttl=title('STEO Projections for OECD Commercial Inventories','fontsize',17);
 
-ttl=title('STEO Projections for OECD Commercial Inventories','fontsize',22);
-ttl.Position(2)=3.3131e+03;
-
-text(0.52,-0.09,'Twitter: @peterdevietien     Data: EIA STEOs','fontsize',18,'units','normalized')
-
-if 0
-    
-    
-end
+t1=text(0.4985,-0.1155,'Twitter: @peterdevietien     Data: EIA STEOs','fontsize',12,'units','normalized');
 
 
 %% Adornments
-if 0
-
-    polynum=1;
-    edate=datetime();
-    sdate=datetime(2021,6,1);
-    
-    speriod=calmonths(3);
-    sdates=[sdate:calmonths:edate];
-    
-    f=load_trendline_dates(sdates,polynum);
-
-hold on
-plot(fitx,fit,'linewidth',2,'linestyle','-','color',[0.3010 0.7450 0.9330])
-hold off
-
-lgnnames=[lgnnames {sprintf('Trend: %.2fmbpd',pf(1)/30)}];
-
-end
 
 
 %%
-lgn=legend(lgnnames,'fontsize',22);
+lgn=legend(lgnnames,'fontsize',16);
 %lgn.Position=[0.6291 0.6926 0.2184 0.1141];
 
 
-text(0.3,0.15,['600mb drop Aug ''20 - Feb ''22',...
-    newline,'=',newline,'1.1mbpd draw for 18 months for OECD'],'units','normalized','fontsize',22,'horizontalalignment','center');
+%text(0.3,0.15,['600mb drop Aug ''20 - Feb ''22',...
+%    newline,'=',newline,'1.1mbpd draw for 18 months for OECD'],'units','normalized','fontsize',22,'horizontalalignment','center');
 
 
 %%
