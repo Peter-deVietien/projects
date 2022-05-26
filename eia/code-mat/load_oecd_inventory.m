@@ -48,12 +48,14 @@ grid on
 
 ax=gca;
 ax.XGrid='off';
+ax.FontSize=14;
 
-lgn=legend('STEO: OECD End-of-period Commercial Crude Oil and Other Liquids Inventory','STEO: OECD End-of-period Commercial Crude Oil and Other Liquids Inventory + U.S. SPR','Petroleum and other liquids stocks, OECD, Monthly');
-lgn.Position=[0.2158 0.1619 0.6783 0.1128];
+lgn=legend('STEO Commercial Crude Oil and Other Liquids Inventory','STEO Commercial Crude Oil and Other Liquids Inventory + U.S. SPR','Petroleum and other liquids stocks, OECD: Ends Feb 2022');
+lgn.Position=[0.1791 0.1441 0.7150 0.1484];
 
 ylim([1500 5000])
 
+ylabel('Million Barrels')
 title('Attempting to get total OECD inventories')
 
 print('~/projects/eia/post/total_oecd_inventory','-dpng')
