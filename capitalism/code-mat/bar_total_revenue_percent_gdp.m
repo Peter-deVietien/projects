@@ -12,7 +12,8 @@ year=yearf;
 %%
 
 fig=gcf;
-fig.Position=[298 382 1096 484];
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
 
 k=[revenue_fed,revenue_state,revenue_local];
 
@@ -24,22 +25,23 @@ ylabel('Percent of GDP')
 grid on
 ax=gca;
 ax.XGrid='off';
-ax.FontSize=20;
+ax.FontSize=16;
 ax.XTick=[datetime(1776,1,1), datetime(1800,1,1):calyears(25):datetime(2025,1,1)]
 %ax.Position=[0.1300 0.1189 0.7750 0.7381];
+ax.YTick=[0:5:40];
 
 xlim([datetime(1775,1,1) datetime(2026,1,1)])
 ylim([0 40])
 
-
 lgs={'Federal','Federal + State','Federal + State + Local'};
 lgn=legend(flip(b),flip(lgs));
-lgn.Position=[0.1471 0.7016 0.2089 0.1436];
+lgn.Position=[0.1458 0.6056 0.3192 0.1706];
 
-title(['Total U.S. Tax Revenue',newline,'Percent of GDP'])
+tt=title(['U.S. Tax Revenue as a Percent of GDP'],'fontsize',18,'units','normalized');
+tt.Position=[.5 .9074 0];
 
-t=text(0.55,0.035,'@peterdevietien    www.usgovernmentrevenue.com','fontsize',15,'units','normalized');
-t.Position=[-0.0275 -0.1102 0];
+t1=text(0.2247,0.5778,'www.usgovernmentrevenue.com','fontsize',11,'units','normalized','horizontalalignment','center');
+t2=text(0.2247,0.5262,'@peterdevietien','fontsize',11,'units','normalized','horizontalalignment','center');
 
 %%
-print('~/projects/capitalism/post/total_revenue_percent_gdp','-dpng')
+print('~/projects/capitalism/post/total_revenue_percent_gdp','-dpng','-r300')

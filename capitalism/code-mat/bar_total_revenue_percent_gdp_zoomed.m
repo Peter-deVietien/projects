@@ -35,7 +35,7 @@ ylim([0 45])
 
 lgs={'Federal','Federal + State','Federal + State + Local'};
 lgn=legend(flip(b),flip(lgs),'fontsize',12);
-lgn.Position=[0.1392 0.6648 0.2775 0.1439];
+lgn.Position=[0.1392 0.6678 0.2775 0.1439];
 
 tt=title(['U.S. Tax Revenue as a Percent of GDP'],'fontsize',18,'units','normalized');
 tt.Position=[0.5 .91 0];
