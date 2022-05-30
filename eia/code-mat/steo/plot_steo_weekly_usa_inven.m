@@ -81,16 +81,16 @@ ylim(yl)
 ytickformat('%.1f')
 
 %%
-xlim([datetime(2020,1,1) datetime(2023,1,1)])
+xlim([datetime(2010,1,1) datetime(2023,1,1)])
 
 title_str=sprintf('Total U.S. Petroleum Inventories: STEO and Weeklies');
 ttl=title(title_str,'fontsize',16);
 
 lgn=legend(lgnnames);
 lgn.FontSize=12;
-%lgn.Position=[0.4767 0.2573 0.1950 0.1884];
+lgn.Position=[0.1342 0.8086 0.1975 0.0994];
 
-lastdatestr='May 18th';
+lastdatestr='May 25th';
 t1=text(0.0065,0.0288,sprintf('All Products and Crude Including SPR.  Includes %s EIA Release',lastdatestr),'fontsize',13,'units','normalized');
 t2=text(0.24,-0.1326,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',11,'units','normalized');
 

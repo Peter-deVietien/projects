@@ -5,9 +5,9 @@ import pandas as pd
 #print(sys.argv[1])
 
 homedir='/Users/peter/projects/stock/data'
-homedir='C:/Users/pdevi/Desktop/projects/stock/data'
+#homedir='C:/Users/pdevi/Desktop/projects/stock/data'
 stock_ticker=sys.argv[1]
-#stock_ticker='TSLA'
+#stock_ticker='BTC-USD'
 
 stock_obj=yf.Ticker(stock_ticker)
 

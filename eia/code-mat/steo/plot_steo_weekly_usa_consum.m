@@ -73,14 +73,14 @@ ylim(y_lim)
 
 %%
 title_str=['U.S. Oil Products Consumption'];
-ttl=title(title_str,'fontsize',18);
+ttl=title(title_str,'fontsize',16);
 
-lgn=legend(lgnnames,'fontsize',14);
-lgn.Position=[0.1353 0.7838 0.4580 0.1113];
+lgn=legend(lgnnames,'fontsize',13);
+lgn.Position=[0.1433 0.7789 0.4017 0.1053];
 
 xlim([datetime(2019,1,1) datetime(2023,1,1)])
 
-t1=text(0.59,0.0288,'Includes May 18th Weekly Release','units','normalized','fontsize',12);
+t1=text(0.59,0.0288,'Includes May 25th Weekly Release','units','normalized','fontsize',12);
 t2=text(0.3119,-0.1327,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',10,'units','normalized');
 
 %%

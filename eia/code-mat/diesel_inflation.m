@@ -49,6 +49,7 @@ lylbl=ylabel('Diesel Price [$]');
 
 tt=title(sprintf('U.S. Diesel Prices [2022 USD]'),'fontsize',20);
 
+t2=text(0.7226,0.0348,['Last Date ',datestr(d1.dates(end))],'fontsize',13,'FontName','Times','units','normalized');
 t3=text(0.4683,-0.1124,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',12,'FontName','Times','units','normalized');
 
 %%
