@@ -84,7 +84,7 @@ ylim(y_lim);
 
 
 
-xlim([datetime(1990,1,1) datetime(2029,1,1)])
+xlim([datetime(190,1,1) datetime(2029,1,1)])
 
 tt=title('S&P 500 and 70 Year Least Squares Fit','fontsize',20);
 

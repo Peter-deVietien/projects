@@ -13,16 +13,9 @@ price(sel)=[];
 dates(sel)=[];
 
 
-%%
-
+%% Get Least Squares
 lp=log(price/price(1));
-
-
-%% Plot least squares
-dls = [];
-for i=1:numel(dates)
-    dls(i)=days(dates(i)-dates(1));
-end
+dls=days(dates-dates(1));
 
 [yo,mo,x,bo]=least_squares(dls,lp);
 
@@ -46,7 +39,8 @@ fig.Position=[75.8000 342 1200/scale 675/scale];
 p(1)=plot(dates,price,'b','linewidth',1);
 
 hold on
-plot([dates(1) dates(end)+calyears(20)],[1 1]*price(end),'b','linewidth',0.2)
+k=plot([dates(1) dates(end)+calyears(20)],[1 1]*price(end),'b','linewidth',0.2);
+k.Color(4)=0.5;
 p(2)=plot(dates(1)+x,exp(yo)*price(1),'linewidth',3,'color',trendcolor);
 p(3)=plot(dates(1)+ppx,exp(ppy)*price(1),'linewidth',2,'linestyle','--','color',trendcolor*1.1);
 hold off
@@ -60,7 +54,7 @@ annual_rate=365*(exp(mo)-1);
 grid on
 
 lgn=legend(p,'S&P 500','70 Year Least Squares Fit','Extrapolation');
-lgn.Position=[0.1408 0.6056 0.2942 0.1395];
+lgn.Position=[0.1341 0.7656 0.2942 0.1395];
 
 
 ylbl=ylabel('S&P 500 Price');
@@ -69,8 +63,6 @@ ylbl=ylabel('S&P 500 Price');
 
 ax=gca;
 ax.FontSize=13;
-
-
 
 %%
 ytickformat('%,.0d')
@@ -85,13 +77,11 @@ ylim(y_lim);
 
 %%
 
-
-
-xlim([datetime(1990,1,1) datetime(2029,1,1)])
+xlim([datetime(2010,1,1) datetime(2024,1,1)])
 
 tt=title('S&P 500 and 70 Year Least Squares Fit','fontsize',20);
 
 t1=text(0.4635,0.0292,sprintf('Twitter: @peterdevietien   Last date: %s',datestr(dates(end),'dd-mmm-yyyy')),'fontsize',11,'units','normalized');
 
 %%
-print('~/projects/stock/post/sp500_least_squares_linear','-dpng')
+print('~/projects/stock/post/sp500_least_squares_linear_zoomed','-dpng')

@@ -44,8 +44,8 @@ p(1)=plot(dates,price,'b','linewidth',1);
 
 hold on
 plot([dates(1) dates(end)+calyears(20)],[1 1]*price(end),'b','linewidth',0.2)
-p(2)=plot(dates(1)+x,exp(yo)*price(1),'linewidth',3,'color',trendcolor);
-p(3)=plot(dates(1)+ppx,exp(ppy)*price(1),'linewidth',2,'linestyle','--','color',trendcolor*1.1);
+p(2)=plot(dates(1)+x,exp(yo)*price(1),'linewidth',1,'color',trendcolor);
+p(3)=plot(dates(1)+ppx,exp(ppy)*price(1),'linewidth',1,'linestyle','--','color',trendcolor*1.1);
 hold off
 
 
@@ -84,11 +84,11 @@ ylim(y_lim);
 
 
 
-xlim([datetime(1990,1,1) datetime(2029,1,1)])
+xlim([datetime(1948,1,1) datetime(2028,1,1)])
 
 tt=title('S&P 500 and 70 Year Least Squares Fit','fontsize',20);
 
-t1=text(0.4635,0.0292,sprintf('Twitter: @peterdevietien   Last date: %s',datestr(dates(end),'dd-mmm-yyyy')),'fontsize',11,'units','normalized');
+t1=text(0.47,-0.1073,sprintf('Twitter: @peterdevietien   Last date: %s',datestr(dates(end),'dd-mmm-yyyy')),'fontsize',11,'units','normalized');
 
 %%
-print('~/projects/stock/post/sp500_least_squares_linear','-dpng')
+print('~/projects/stock/post/sp500_least_squares_linear_zoomed_out','-dpng')

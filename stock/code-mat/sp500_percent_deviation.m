@@ -13,34 +13,36 @@ price(sel)=[];
 dates(sel)=[];
 
 
-%%
-
+%% Calc least squares
 lp=log(price/price(1));
 
-%plot(dates,lp,'b')
-
-%% Calc least squares
 dls=days(dates-dates(1));
 
 [yo,mo,x,bo]=least_squares(dls,lp);
 
-dy=lp-yo;
+trend=exp(yo)*price(1);
 
-factor=(exp(lp(end))*price(1)) / (exp(yo(end))*price(1));
+percent_change=(price./trend-1)*100;
 
-p(1)=plot(dates(1)+x,dy/dy(end)*(factor-1)*100,'color','b');
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
+p(1)=plot(dates(1)+x,percent_change,'color','b');
 
 hold on
 plot([dates(1)-2000,dates(end)+2000],[0,0],'k-')
-p(2)=plot([dates(1) dates(end)],[1 1]*(factor-1)*100,'r','linewidth',0.2);
+p(2)=plot([dates(1) dates(end)],[1 1]*percent_change(end),'r','linewidth',0.2);
 hold off
 p(2).Color(4)=0.6;
-y_lim=ylim;
 
 ylabel('Percent from Trend')
 
+y_lim=[-80 120];
+ytick=[-100:20:120];
+ylim(y_lim)
 ax=gca;
-ax.YTick=[-100:10:100];
+ax.YTick=ytick;
 
 
 yyaxis right
@@ -57,24 +59,22 @@ annual_rate=365*(exp(mo)-1);
 %%
 grid on
 ax=gca;
-ax.FontSize=18;
+ax.FontSize=14;
 
-title('S&P 500 Percent Change from 70 Year Trend','Fontsize',28)
+title('S&P 500 Percent Change from 70 Year Trend','Fontsize',18)
 
-
-
-ax.YTick=[-100:10:100];
+ax.YTick=ytick;
 ax.XGrid='off';
 
-fig=gcf;
-fig.Position=[13 161 1500 705];
 
 xlim([datetime(1948,1,1) datetime(2024,1,1)])
 
-lgn=legend(p,'Percent Change','Today''s Value','fontsize',22);
+lgn=legend(p,'Percent Change','Today''s Value');
+lgn.Position=[0.1375 0.8041 0.2208 0.1024];
 
-text(0.67,-0.1,'Truth Social: @pdv   Twitter: @peterdevietien','fontsize',20,'units','normalized')
-text(0.61,0.04,sprintf('Includes %s\nPercent change from 70 year exponential least squares fit',datestr(dates(end),'mmm dd yyyy')),'fontsize',17,'units','normalized')
+t1=text(0.5324,-0.1073,'Truth Social: @pdv   Twitter: @peterdevietien','fontsize',11,'units','normalized');
+t2=text(0.68,0.075,sprintf('Includes %s',datestr(dates(end),'mmm dd yyyy')),'fontsize',11,'units','normalized','horizontalalignment','center');
+t3=text(0.68,0.025,'Percent change from 70 year exponential least squares fit','fontsize',11,'units','normalized','horizontalalignment','center');
 
 %%
 print('~/projects/stock/post/sp500_percent_deviation','-dpng')
