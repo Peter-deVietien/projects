@@ -18,8 +18,8 @@ grid on
 ax=gca;
 ax.XGrid='off';
 
-xlim([datetime(1990,1,1) datetime(2023,1,1)])
-ylim([10 1000])
+xlim([datetime(1850,1,1) datetime(2023,1,1)])
+ylim([0 1000])
 
 lgn=legend('Shiller Earnings','Bloomberg Earnings');
 lgn.Position=[0.7312 0.2130 0.1711 0.1148];

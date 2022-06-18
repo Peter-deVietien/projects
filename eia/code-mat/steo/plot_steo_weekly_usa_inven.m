@@ -4,8 +4,8 @@ dirname_base={'may21','nov21','may22'};
 lgnnames={'STEO May ''21','STEO November ''21','STEO May ''22'};
 
 
-dirname_base={'may22'};
-lgnnames={'STEO May ''22'};
+dirname_base={'jun22'};
+lgnnames={'STEO June ''22'};
 
 
 nd=numel(dirname_base);
@@ -90,8 +90,8 @@ lgn=legend(lgnnames);
 lgn.FontSize=12;
 lgn.Position=[0.1342 0.8086 0.1975 0.0994];
 
-lastdatestr='May 25th';
-t1=text(0.0065,0.0288,sprintf('All Products and Crude Including SPR.  Includes %s EIA Release',lastdatestr),'fontsize',13,'units','normalized');
+lastdatestr=datestr(d.dates(end));
+t1=text(0.0861,0.0288,sprintf('All Products and Crude Including SPR.  Data Week Ending %s',lastdatestr),'fontsize',13,'units','normalized');
 t2=text(0.24,-0.1326,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',11,'units','normalized');
 
 %%

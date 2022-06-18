@@ -111,7 +111,7 @@ ylabel('Brent [2022 USD]')
 lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',11);
 lgn.Position=[0.1442 0.6160 0.2725 0.1306];
 
-tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nIncludes May 25th Release');
+tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nData Week Ending %s',dates(end));
 tt=title(tstr);
 tt.FontName='Arial Unicode MS';
 tt.Position=[6.3999e+03 107.2958 -0.5000];

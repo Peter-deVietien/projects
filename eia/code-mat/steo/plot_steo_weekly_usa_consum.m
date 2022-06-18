@@ -1,7 +1,7 @@
 cca
 
-dirname_base={'may22'};
-lgnnames={'May 2022 STEO'};
+dirname_base={'jun22'};
+lgnnames={'June 2022 STEO'};
 
 nd=numel(dirname_base);
 
@@ -80,7 +80,7 @@ lgn.Position=[0.1433 0.7789 0.4017 0.1053];
 
 xlim([datetime(2019,1,1) datetime(2023,1,1)])
 
-t1=text(0.59,0.0288,'Includes May 25th Weekly Release','units','normalized','fontsize',12);
+t1=text(0.618,0.0288,sprintf('Data Week Ending %s',datestr(d.dates(end))),'units','normalized','fontsize',12);
 t2=text(0.3119,-0.1327,'Truth Social: @pdv  |  Twitter: @peterdevietien  |  Data:  EIA STEOs & EIA','fontsize',10,'units','normalized');
 
 %%

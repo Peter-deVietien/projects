@@ -17,22 +17,17 @@ petro_infl=d1.y./infl;
 
 fig=figure;
 scale=2;
-fig.Position=[75.8000 342 1200/scale 675/scale];
+fig.Position=[75.8000 342 1500/scale 675/scale];
 
 plot(dates,petro_infl,'linewidth',2,'color',leftycolor)
-
-hold on
-p=plot([dates(1) dates(end)],[1 1]*petro_infl(end),'linewidth',1,'color',leftycolor);
-p.Color(4)=0.3;
-hold off
 
 grid on
 
 ax=gca;
-ax.FontSize=16;
-y_lim=[1.5 6];
+ax.FontSize=14;
+y_lim=[3.5 5.25];
 ylim(y_lim);
-yticks=[1:6];
+yticks=[1:.5:6];
 ax.YTick=yticks;
 
 yticklbl={};
@@ -51,15 +46,15 @@ ylim(y_lim)
 ax.YTick=yticks;
 ax.YTickLabel=yticklbl;
 
-ax.XTick=[datetime(2001-8,1,1):calyears(4):datetime(2025,1,1)];
+ax.XTick=[datetime(2001,1,1):calmonths(3):datetime(2025,1,1)];
 
-ax.Position=[0.1271 0.1200 0.7779 0.7340];
-tt=title(sprintf('U.S. Gasoline Prices \n Inflation Adjusted [2022 USD]'),'fontsize',18);
+%ax.Position=[0.1271 0.1200 0.7779 0.7340];
+tt=title(sprintf('U.S. Gasoline Prices [2022 USD]'),'fontsize',18);
 
 
 %%
 
-xlim([d1.dates(1) d1.dates(end)+calmonths(12)])
+xlim([datetime(2010,12,1) datetime(2014,10,1)])
 
 if 0
    hold on
@@ -76,19 +71,13 @@ if 0
    text(datetime(2022,4,1),5.7,'Biden','fontsize',20,'fontname','Times')
    
    xlim([datetime(2009,1,1) datetime(2025,1,1)])
-   
-   t1=text(0.0082,0.0388,['All Items US CPI, Last Date ',datestr(d1.dates(end))],'fontsize',13,'FontName','Times','units','normalized');
-   filename='gasoline_price_usa_presidents';
-else
-   t1=text(0.5248,0.0388,['All Items US CPI, Last Date ',datestr(d1.dates(end))],'fontsize',13,'FontName','Times','units','normalized');
-    filename='gasoline_price_usa';
 
 end
 
 
 
-
-t2=text(0.4750,-0.1342,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',12,'FontName','Times','units','normalized');
+%t1=text(datetime(2021,3,1),1.65,sprintf('Last: %s',datestr(d1.dates(end),'dd mmm ''yy')),'fontsize',12);
+t2=text(0.3995,0.0369,'Twitter: @peterdevietien   Data: EIA, St. Louis Fed','fontsize',12,'FontName','Times','units','normalized');
 
 %%
-print(sprintf('~/projects/eia/post/%s',filename),'-dpng')
+print('~/projects/eia/post/gasoline_bumps_zoomed','-dpng')

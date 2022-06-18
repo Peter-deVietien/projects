@@ -5,53 +5,58 @@ series_key1='STEO.PASC_OECD_T3.M';
 series_key2='STEO.PATC_WORLD.M';
 
 [dinit1,metadata1]=load_eia_series(series_key1);
-d1=process_monthly_data(dinit1);
+con=process_monthly_data(dinit1);
 
 [dinit2,metadata2]=load_eia_series(series_key2);
-d2=process_monthly_data(dinit2);
+inv=process_monthly_data(dinit2);
 
 %% Clip to common times
 
-sind=find(d2.dates==d1.dates(1));
-d2.dates=d2.dates(sind:end);
-d2.y=d2.y(sind:end);
+sdate=max(con.dates(1),inv.dates(1));
+edate=datetime(2022,5,31);
 
 
-eind=find(d1.dates==datetime(2022,3,1));
+ind1=find(con.dates==sdate);
+ind2=find(inv.dates==sdate);
 
-d1.dates=d1.dates(1:eind);
-d1.y=d1.y(1:eind);
+con.dates=con.dates(ind1:end);
+con.y=con.y(ind1:end);
 
-d2.dates=d2.dates(1:eind);
-d2.y=d2.y(1:eind);
+inv.dates=inv.dates(ind2:end);
+inv.y=inv.y(ind2:end);
 
-d1.dates=d1.dates+calmonths(1);
-d2.dates=d2.dates+calmonths(1);
+eind=find(con.dates==edate);
+con.dates=con.dates(1:eind);
+inv.dates=inv.dates(1:eind);
+con.y=con.y(1:eind);
+inv.y=inv.y(1:eind);
+
 %%
-days_remaining=d1.y./d2.y;
+days_remaining=con.y./inv.y;
 
 %%
 
-plot(d1.dates,days_remaining,'linewidth',2)
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
+plot(con.dates,days_remaining,'linewidth',2)
 
 hold on
-plot([d1.dates(1) d1.dates(end)],[1 1]*days_remaining(end),'r')
+plot([con.dates(1) con.dates(end)],[1 1]*days_remaining(end),'r')
 hold off
 
 %%
 grid on
 
 ax=gca;
-ax.FontSize=19;
+ax.FontSize=14;
 ax.GridAlpha=0.08;
-
-fig=gcf;
-fig.Position=[144 341 892 525];
 
 %%
 
 ylbl=ylabel('Days Remaining');
-ylbl.Position=[-50 31.5000 -1.0000];
+%ylbl.Position=[-50 31.5000 -1.0000];
 yl=[25 38];
 ylim(yl)
 yt=ax.YTick;
@@ -62,25 +67,19 @@ ylim(yl);
 ax.YTick=yt;
 ax.YAxis(2).Color='k';
 
-xlim([datetime(2004,1,1) datetime(2022,6,1)])
+xlim([datetime(2004,1,1) datetime(2023,1,1)])
 
-k=listfonts;
-nk=numel(k);
-%for i = 1:1
-    %fname=k{i};
-    
-    tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nApril STEO:  March Last Data on Plot');
-    tt=title(tstr);
-    tt.Position(2)=34.9;
-    tt.Position(1)=3.300e+03;
-    tt.FontSize=25;
-    
-    tt.FontName='Arial Unicode MS';%fname;
-  %  pause(1)
- %   print(sprintf('fonts/%s',fname),'-dpng')
-%end
 
-text(0.5,-0.1,'Twitter: @peterdevietien   Data: April STEO','fontsize',17,'units','normalized')
+tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nJune STEO:  May Last Data on Plot');
+tt=title(tstr,'horizontalalignment','center','units','normalized');
+tt.Position(2)=0.7745;
+tt.Position(1)=0.5;
+%tt.FontSize=25;
+
+tt.FontName='Arial Unicode MS';
+
+
+t1=text(0.6355,-0.1073,'Twitter: @peterdevietien   Data: EIA','fontsize',11,'units','normalized');
 
 %%
 filename='days-remaining-oecd-global';

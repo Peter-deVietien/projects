@@ -1,26 +1,21 @@
 cca;
-ticker='BRK-B';
-plot_price
 
-brk.dates=dates_full;
-brk.price=price;
+brk=load_ticker_data('BRK-B');
 
-ticker='SPY';
-plt_color=[1 0 0];
-overlay_price
+dia=load_ticker_data('DIA');
 
-spy.dates=dates_full;
-spy.price=price;
+%%
 
-hold on
-plot([spy.dates(1) spy.dates(end)],[1 1]*spy.price(end),'k--')
-hold off
+leftycolor=[0 0.4470 0.7410];
+rightycolor=[0.8500 0.3250 0.0980];
 
-txt=text(datetime(2011,1,1),spy.price(end)-20,'Today''s SPY price');
-txt.FontSize=18;
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
 
-txt=text(datetime(2011,4,1),spy.price(end)-40,'@peterdevietien');
-txt.FontSize=15;
+%%
+
+[~,euprice]=dspline(gdates,gprice,eu.dates_close);
 
 %%
 grid on

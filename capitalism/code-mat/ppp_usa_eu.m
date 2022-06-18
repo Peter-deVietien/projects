@@ -4,10 +4,16 @@ load_ppp_worldbank
 
 %%
 
-countries={'UnitedStates','France','EuropeanUnion','China'};
-legendstr={'United States','France','European Union','China'};
+countries={'UnitedStates','Canada','EuropeanUnion','China'};
+legendstr={'United States','Canada','European Union','China'};
 nc=numel(countries);
 
+%%
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
+%%
 for i=1:nc
     ppp=t.(countries{i});
     
@@ -18,11 +24,8 @@ for i=1:nc
 end
 
 
-fig=gcf;
-fig.Position=[476 388 865 478];
-
 ax=gca;
-ax.FontSize=17;
+ax.FontSize=15;
 grid on
 
 ytickformat('%,.0d')
@@ -41,13 +44,13 @@ ylim(y_lim)
 ytickformat('%,.0d')
 ax.YAxis(2).Exponent=0;
 
-lgn=legend(legendstr,'fontsize',18);
-lgn.Position=[0.1295 0.7333 0.1977 0.1914];
+lgn=legend(legendstr,'fontsize',14);
+lgn.Position=[0.1417 0.6855 0.2367 0.2122];
 
-tstr=sprintf('WorldBank PPP GDP Per Capita');
-title(tstr,'fontsize',25)
+tstr=sprintf('PPP GDP Per Capita');
+title(tstr,'fontsize',18)
 
-text(0.5,-0.1,'Twitter: @peterdevietien   Data: WorldBank','fontsize',17,'units','normalized')
+t1=text(0.51,-0.111,'Twitter: @peterdevietien   Data: WorldBank','fontsize',12,'units','normalized');
 
 
 filename='ppp_usa_eu';

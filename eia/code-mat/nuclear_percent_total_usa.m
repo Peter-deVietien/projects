@@ -12,15 +12,17 @@ leftycolor=[0 0.4470 0.7410];
 rightycolor=[0.8500 0.3250 0.0980];
 
 %%
+
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
+
 plot(d1.dates,d1.y,'linewidth',4,'color',leftycolor)
 
 %%
 grid on
 ax=gca;
-ax.FontSize=22;
-
-fig=gcf;
-fig.Position=[203 305 847 561];
+ax.FontSize=16;
 
 ylim([0 30])
 
@@ -41,17 +43,16 @@ ax.YTickLabel=yticklabels;
 %%
 ax.XGrid='off';
 
-tt=title(sprintf('Nuclear Fission\nPercent of Total U.S. Electricity'),'fontsize',30);
+tt=title(sprintf('Nuclear Fission\nPercent of Total U.S. Electricity'),'fontsize',18);
 tt.Units='normalized';
 tt.Position=[0.5 0.83 0];
 
 %%
 
-
 %k=sprintf("'Prior to 1975 the Atomic Energy Commission \nwas in charge of matters regarding radionuclides. \nThe AEC was dissolved, because it was perceived as\n unduly favoring the industry it was charged with regulating.'");
 %text(0.62,0.14,k,'fontsize',18,'horizontalalignment','center','units','normalized')
 
 
-text(0.6,-0.1,'Twitter: @peterdevietien   Data: EIA','fontsize',16,'units','normalized')
+t1=text(0.6344,-0.1109,'Twitter: @peterdevietien   Data: EIA','fontsize',11,'units','normalized');
 %%
 print('~/projects/eia/post/nuclear_percent_total_usa','-dpng')

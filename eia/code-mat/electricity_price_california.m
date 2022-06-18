@@ -35,18 +35,19 @@ hold off
 grid on
 
 ax=gca;
-ax.FontSize=16;
+ax.FontSize=14;
 ax.XGrid='off';
+ax.Position=[0.1300 0.1244 0.7750 0.7349];
 
 
 ylabel('Cents per kWh')
 
-%tt=title(sprintf('Price of Calfornia Electricity vs U.S. Average'),'fontsize',20);
+tt=title(sprintf('California up 11%% YoY\nU.S. Average up 5.5%%'),'fontsize',18);
 
 
-t1=text(0.5791,0.7461,sprintf('California Electricity\nPrice'),'fontsize',20,'units','normalized','color',leftycolor,'horizontalalignment','center','fontweight','light');
-t2=text(0.4976,0.2261,'U.S. Average','fontsize',20,'units','normalized','color',rightycolor,'fontweight','light');
-t3=text(0.6204,-0.1075,'Twitter: @peterdevietien   Data: EIA','fontsize',12,'FontName','Times','units','normalized');
+t1=text(0.5791,0.7461,sprintf('California Electricity\nPrice'),'fontsize',18,'units','normalized','color',leftycolor,'horizontalalignment','center','fontweight','light');
+t2=text(0.4976,0.2261,'U.S. Average','fontsize',18,'units','normalized','color',rightycolor,'fontweight','light');
+t3=text(0.6182,-0.1223,'Twitter: @peterdevietien   Data: EIA','fontsize',12,'FontName','Times','units','normalized');
 
 %%
 
