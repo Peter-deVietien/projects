@@ -70,9 +70,13 @@ ax.FontSize=13;
 
 
 %%
+%%
 ytickformat('%,.0d')
 ax.YAxis(1).Exponent=0;
-y_lim=ylim;
+y_lim=[0 5000];
+ylim(y_lim);
+
+
 yyaxis right
 ax.YAxis(2).Color='k';
 ax=gca;

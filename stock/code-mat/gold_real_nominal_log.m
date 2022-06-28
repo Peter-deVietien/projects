@@ -8,12 +8,13 @@ gprice=gprice(end-numel(dates)+1:end);
 
 %%
 
+lw=1.5;
 
 
-semilogy(dates,gprice);
+semilogy(dates,gprice,'linewidth',lw);
 
 hold on
-semilogy(dates,gprice./sinfl)
+semilogy(dates,gprice./sinfl,'linewidth',lw)
 hold off
 
 fig=gcf;
@@ -23,7 +24,7 @@ fig.Position=[75.8000 342 1200/scale 675/scale];
 ax=gca;
 ax.FontSize=14;
 ax.YGrid='on';
-yticks=[20,35,100,500,1000,2000];
+yticks=[20,35,100,200,500,1000,2000];
 ax.YTick=yticks;
 
 y_lim=[19 4000];

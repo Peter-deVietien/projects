@@ -61,13 +61,13 @@ tt=title(sprintf('U.S. Gasoline Prices \n Inflation Adjusted [2022 USD]'),'fonts
 
 xlim([d1.dates(1) d1.dates(end)+calmonths(12)])
 
-if 0
+if 1
    hold on
    %plot([datetime(2001,1,1) datetime(2001,1,1)],[0 80000],'m-','linewidth',2)
-   plot([datetime(2009,1,1) datetime(2009,1,1)],[0 8],'r-','linewidth',2)
-   plot([datetime(2017,1,1) datetime(2017,1,1)],[0 8],'r-','linewidth',2)
-   plot([datetime(2021,1,1) datetime(2021,1,1)],[0 80000],'r-','linewidth',2)    
-   plot([datetime(2025,1,1) datetime(2021,1,1)],[0 80000],'r-','linewidth',2)    
+   plot([datetime(2009,1,1) datetime(2009,1,1)],[0 8],'g-','linewidth',2)
+   plot([datetime(2017,1,1) datetime(2017,1,1)],[0 8],'g-','linewidth',2)
+   plot([datetime(2021,1,1) datetime(2021,1,1)],[0 80000],'g-','linewidth',2)    
+   plot([datetime(2025,1,1) datetime(2021,1,1)],[0 80000],'g-','linewidth',2)    
    hold off
 
    text(datetime(2003,1,1),5.7,'Bush','fontsize',20,'fontname','Times')
