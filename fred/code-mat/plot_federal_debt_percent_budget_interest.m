@@ -34,11 +34,12 @@ ylabel('Average Interest Rate')
 
 ax=gca;
 ax.FontSize=15;
+ylim([0 7])
 yticks=ax.YTick;
 ylbl=[];
 
 for i=1:numel(yticks)
-    ylbl=[ylbl {sprintf('%.1f%%',yticks(i))}]
+    ylbl=[ylbl {sprintf('%.1f%%',yticks(i))}];
 end
 
 ax.YTickLabel=ylbl;
@@ -58,7 +59,7 @@ yticks=ax.YTick;
 ylbl=[];
 
 for i=1:numel(yticks)
-    ylbl=[ylbl {sprintf('%.1f%%',yticks(i))}]
+    ylbl=[ylbl {sprintf('%.1f%%',yticks(i))}];
 end
 
 ax.YTickLabel=ylbl;
@@ -72,11 +73,12 @@ ax.YAxis(1).Color=leftycolor;
 ax.YAxis(2).Color=rightycolor;
 
 
-title(['U.S. Percent of Federal Budget Paying Debt Interest',newline,'and Average Interest Rate of that Debt'])
+title(['If interest rates went back to 6%, then 50% of all',newline,'tax revenue would go to paying interest on federal debt'],'fontsize',15)
 
 xl=xlim;
 xlim([datetime(2000,1,1) xl(2)+calmonths(6)])
 
+lgn=legend('Average Interest Rate on Federal Debt','Percent of Federal Budget Paying Debt Interest');
 
 %t1=text(0.296,0.08,'Data Up to March 1st 2022','fontsize',11,'units','normalized');
 %t2=text(0.296,0.025,'Personal Consumption Expenditures: Energy Goods and Services','fontsize',11,'units','normalized');

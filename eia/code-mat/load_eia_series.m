@@ -6,7 +6,7 @@ save_path=sprintf('~/projects/eia/data/api/%s',savename);
 
 k=dir([save_path,'.mat']);
 
-if ~numel(k) | (days(datenum(now)-k.datenum)>1)
+if ~numel(k)
     api_key = '4Cgy5BurMNMAhbo0RBIu3s5FFyyo37QEVmW0uBoz';
 
     url=sprintf('https://api.eia.gov/series/?api_key=%s&series_id=%s', api_key, series_key);

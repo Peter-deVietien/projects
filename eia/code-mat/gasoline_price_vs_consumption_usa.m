@@ -24,7 +24,7 @@ petro_infl=d1.y./infl;
 fig=gcf;
 fig.Position=[125 385 1007 550];
 
-petro_infl=moving_average(dates,petro_infl,30*3);
+petro_infl=moving_average(dates,petro_infl,30);
 
 petro_infl(end-15:end)=d1.y(end-15:end)./infl(end-15:end);
 p=plot(dates,petro_infl,'linewidth',3,'color',leftycolor);
