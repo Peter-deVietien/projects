@@ -1,12 +1,15 @@
+function [data,wrseries]=load_eia_series(series_key,reload)
 
-function [data,wrseries]=load_eia_series(series_key)
+if ~exist('reload','var')
+    reload=false;
+end
 
 savename=regexprep(series_key,'\.','_');
-save_path=sprintf('~/projects/eia/data/api/%s',savename);
+save_path=sprintf('~/projects/eia/data/api/%s.mat',savename);
 
-k=dir([save_path,'.mat']);
+k=dir(save_path);
 
-if ~numel(k)
+if ~numel(k) || reload || (days(now()-k.datenum())>1)
     api_key = '4Cgy5BurMNMAhbo0RBIu3s5FFyyo37QEVmW0uBoz';
 
     url=sprintf('https://api.eia.gov/series/?api_key=%s&series_id=%s', api_key, series_key);

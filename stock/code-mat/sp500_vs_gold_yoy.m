@@ -12,6 +12,23 @@ price=d.close;
 
 [~,cprice]=dspline(gdates,gprice,dates);
 
+ratio=price./cprice;
+
+%%
+rat_yoy=nan(numel(dates),1);
+dates_yoy=NaT(numel(dates),1);
+
+if 0
+for i=numel(dates):-1:360
+    ind=find(dates>(dates(i)-calyears(1)),1,'first');
+    rat_yoy(i)=ratio(i)/ratio(ind);
+    dates_yoy(i)=dates(i);
+end
+    save('gold_sp500_rat.mat','dates_yoy','rat_yoy')
+else
+    load('gold_sp500_rat.mat')
+end
+
 %%
 leftycolor=[0 0.4470 0.7410];
 rightycolor=[0.8500 0.3250 0.0980];
@@ -20,14 +37,17 @@ fig=figure;
 scale=2;
 fig.Position=[75.8000 342 1200/scale 675/scale];
 
-p(1)=plot(dates,price./cprice,'linewidth',1,'color',leftycolor);
+plot([datetime(1800,1,1) datetime(2030,1,1)],[0 0],'k-','linewidth',0.5)
 
+hold on
+p(1)=plot(dates_yoy,(rat_yoy-1)*100,'linewidth',1,'color',leftycolor);
+hold off
 %%
 grid on
 ax=gca;
 ax.FontSize=15;
 
-title(['S&P 500 in ounces of Gold'],'Fontsize',18)
+title(['S&P 500 priced in ounces of gold, YoY'],'Fontsize',18)
 
 ax.XGrid='off';
 
@@ -38,4 +58,4 @@ t1=text(0.0151,0.0382,['Last Date: ',datestr(dates(end),'dd-mmm-yyyy')],'fontsiz
 t2=text(0.5266,-0.1088,'Truth Social: @pdv   Twitter: @peterdevietien','fontsize',11,'units','normalized');
 
 %%
-print('~/projects/stock/post/sp500_vs_gold','-dpng')
+print('~/projects/stock/post/sp500_vs_gold_yoy','-dpng')

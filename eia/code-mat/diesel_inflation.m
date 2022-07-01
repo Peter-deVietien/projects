@@ -4,7 +4,7 @@ cca
 series1='PET.EMD_EPD2D_PTE_NUS_DPG.W';
 
 %%
-[dinit1,metadata]=load_eia_series(series1);
+[dinit1,metadata]=load_eia_series(series1,true);
 d1=process_weekly_data(dinit1);
 
 %%
