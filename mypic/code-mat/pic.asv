@@ -1,0 +1,40 @@
+cca
+
+
+N=400;
+Nx=40;
+t=0
+tEnd=50;
+dt=1
+boxsize=50;
+n0=1;
+vb=3;
+vth=1;
+A=0.1;
+
+pos=rand(N,1)*boxsize;
+vel = vth * rand(N,1) + vb;
+Nh=floor(N/2);
+
+
+
+pgradient;
+plaplacian;
+
+
+
+for i =1:Nt
+    vel = vel + acc * dt/2;
+    
+    pos = pos + vel * dt;
+    pos = mod(pos,boxsize);
+    
+    acc = getAcc(pos, Nx, boxsize, n0, Gmtx, Lmtx);
+    
+    vel = vel + acc * dt/2;
+    
+    t = t+dt;
+    
+    scatter(vel,pos)
+    drawnow
+end
