@@ -15,6 +15,8 @@ semilogy(dates,gprice,'linewidth',lw);
 
 hold on
 semilogy(dates,gprice./sinfl,'linewidth',lw)
+p=semilogy([dates(1) dates(end)],[1 1]*gprice(end),'linewidth',0.5,'color','blue');
+p.Color(4)=0.5;
 hold off
 
 fig=gcf;

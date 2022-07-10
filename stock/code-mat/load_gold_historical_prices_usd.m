@@ -2,7 +2,7 @@ function [dates,price]=load_gold_historical_prices_usd()
 
 %%
 %warning('off','MATLAB:table:ModifiedAndSavedVarnames')
-h=readtable('../data/gold_price_1833_2018_monthly.csv');
+h=readtable('~/projects/stock/data/gold_price_1833_2018_monthly.csv');
 
 hdates=h.dates;
 hprice=h.prices;

@@ -40,6 +40,10 @@ fig.Position=[476 195 744 671];
 subplot(2,1,1)
 plot(dates,ratio,'linewidth',1,'color',leftycolor)
 
+hold on
+pt=plot([dates(1) dates(end)],[1 1]*ratio(end),'r-');
+pt.Color(4)=0.7;
+hold off
 
 grid on
 ax=gca;

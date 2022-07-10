@@ -13,3 +13,5 @@
 !eia/data/steo/*
 !bloomberg/*
 !bloomberg/*/*
+!stock/data/mt*
+!stock/data/*gold*

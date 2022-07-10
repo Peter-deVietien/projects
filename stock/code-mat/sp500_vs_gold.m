@@ -1,5 +1,5 @@
-cca
-
+%cca
+figure
 %%
 ticker='^GSPC';
 d=load_ticker_data(ticker);
@@ -20,7 +20,14 @@ fig=figure;
 scale=2;
 fig.Position=[75.8000 342 1200/scale 675/scale];
 
-p(1)=plot(dates,price./cprice,'linewidth',1,'color',leftycolor);
+ratio=price./cprice;
+
+p(1)=plot(dates,ratio,'linewidth',1,'color',leftycolor);
+
+hold on
+pt=plot([dates(1) dates(end)],[1 1]*ratio(end),'r-');
+pt.Color(4)=0.5;
+hold off
 
 %%
 grid on

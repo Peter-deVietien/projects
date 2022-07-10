@@ -104,19 +104,23 @@ p=plot(dates,brent_infl,'color',racolor,'linewidth',1);
 p.Color(4)=0.8;
 xl=xlim;
 xlim([datetime(1995,1,1) xl(2)+calmonths(6)]);
-ax.YTick=[0:25:200];
+ax.YTick=[0:25:225];
+ax.Position=[0.1300 0.1159 0.7750 0.8470];
+
+ylim([0 225])
 
 ylabel('Brent [2022 USD]')
 
 lgn=legend('Days Remaining','Today''s Days Remaining','Brent Crude','fontsize',11);
-lgn.Position=[0.1442 0.6160 0.2725 0.1306];
+lgn.Position=[0.1442 0.6456 0.2725 0.1306];
 
-tstr=sprintf('Days Remaining U.S. and Brent Inflation Adjusted\nData Week Ending %s',dates(end));
+tstr=sprintf('U.S. Days Remaining: Total Prodct and Crude\n Inflation Adjusted Brent');
 tt=title(tstr);
 tt.FontName='Arial Unicode MS';
-tt.Position=[6.3999e+03 107.2958 -0.5000];
+tt.Position=[6.2240e+03 107.0999 -0.5000];
 
-t1=text(0.01,0.03,'Days Remaining = Total Inventory incl. SPR / 4 Wk Average Total Product Consumed','fontsize',12,'units','normalized');
+t3=text(0.3,0.1,sprintf('Data Includes Week Ending %s',dates(end)),'fontsize',13,'units','normalized');
+t1=text(0.01,0.03,'Days Remaining = All crude and products incl. SPR / 4 Wk Average Total Product Consumed','fontsize',11,'units','normalized');
 t2=text(0.42,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA','fontsize',11,'units','normalized');
 
 %%

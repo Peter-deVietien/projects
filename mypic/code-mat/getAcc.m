@@ -23,10 +23,11 @@ for i=0:Nx-1
 end
 
 
-n=n*n0*boxsize/N/dx;;
+n=n*n0*boxsize/N/dx;
 n=n(:);
 
 %%
+warning('off','MATLAB:nearlySingularMatrix');
 
 phi_grid=Lmtx\(n-n0);
 phi_grid=phi_grid(:);
