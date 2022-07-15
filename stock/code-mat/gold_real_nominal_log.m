@@ -49,7 +49,7 @@ title('Real and Nominal Gold Price in USD')
 %%
 t1=text(0.714,0.0382,['Last Date: ',datestr(dates(end),'dd-mmm-yyyy')],'fontsize',12,'units','normalized');
 t2=text(0.55,-0.11,'Twitter: @peterdevietien   Data: FRED','fontsize',12,'units','normalized');
-
+t3=text(datetime(1950,1,1),gprice(end)*1.15,sprintf('Today: $%.0f',gprice(end)),'fontsize',13)
 xlim([dates(1) dates(end)+calyears(1)])
 
 %%

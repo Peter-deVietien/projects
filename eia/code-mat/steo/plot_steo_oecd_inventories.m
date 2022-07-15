@@ -1,10 +1,7 @@
 cca
 
-dirname_base={'may21','nov21','may22'};
-lgnnames={'May ''21','November ''21','May ''22'};
-
-dirname_base={'apr22','may22'};
-lgnnames={'April ''22 STEO','May ''22 STEO'};
+dirname_base={'jun22','jul22'};
+lgnnames={'June ''22 STEO','July ''22 STEO'};
 
 
 nd=numel(dirname_base);
@@ -20,7 +17,6 @@ fig.Position=[75.8000 342 1200/scale 675/scale];
 
 for i=1:nd
     [dates,inven]=load_steo_oecd_inven(dirnames{i});
-    disp(inven(end))
     
     %% Get month/year
     hold on
@@ -62,13 +58,10 @@ t1=text(0.4985,-0.1155,'Twitter: @peterdevietien     Data: EIA STEOs','fontsize'
 
 
 %%
-lgn=legend(lgnnames,'fontsize',16);
+lgn=legend(lgnnames,'fontsize',14);
 %lgn.Position=[0.6291 0.6926 0.2184 0.1141];
 
-
-%text(0.3,0.15,['600mb drop Aug ''20 - Feb ''22',...
-%    newline,'=',newline,'1.1mbpd draw for 18 months for OECD'],'units','normalized','fontsize',22,'horizontalalignment','center');
-
+xlim([datetime(2019,1,1) datetime(2024,1,1)])
 
 %%
 pngname='~/projects/eia/post/steo_oecd_inventories';

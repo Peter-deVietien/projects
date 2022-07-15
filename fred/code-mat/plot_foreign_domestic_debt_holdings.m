@@ -24,8 +24,16 @@ ax.FontSize=15;
 ax.XGrid='off';
 ax.YTick=[0:2:30];
 ax.Position=[0.1300 0.1215 0.7750 0.8035];
+ylim([0 30])
 
-ylabel('Trillions of Dollars')
+ylabel('Trillions USD')
+
+yyaxis right
+
+ax=gca;
+ax.YTick=[0:2:30];
+ylim([0 30])
+ax.YAxis(2).Color='k';
 
 lgn=legend('Foreign Holdings','Domestic Holdings','fontsize',16);
 lgn.Position=[0.1475 0.7656 0.2950 0.1261];

@@ -1,7 +1,7 @@
 cca
 
-dirname_base={'jun22'};
-lgnnames={'June 2022 STEO'};
+dirname_base={'jul22'};
+lgnnames={'July 2022 STEO'};
 
 nd=numel(dirname_base);
 
@@ -47,8 +47,8 @@ d=process_weekly_data(d);
 %% Manual Add
 eia_weekly_manual_data
 
-d.dates=[d.dates;mandates];
-d.y=[d.y;mantotal_product_4wk];
+% d.dates=[d.dates;mandates];
+% d.y=[d.y;mantotal_product_4wk];
 
 ind=find(d.dates>datetime(2018,1,1),1,'first');
 d.dates=d.dates(ind:end);

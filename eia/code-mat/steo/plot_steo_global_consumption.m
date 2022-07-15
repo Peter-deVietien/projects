@@ -17,9 +17,9 @@ fig.Position=[75.8000 342 1200/scale 675/scale];
 lgs=[];
 for i=1:nd
     
-    [dates,production]=load_steo_global_production(dirnames{i});
+    [dates,inven]=load_steo_global_consumption(dirnames{i});
     hold on
-    plot(dates,production,'linewidth',2)
+    plot(dates,inven,'linewidth',2)
     hold off
     lgs=[lgs {dirname_base{i}}];
     
@@ -41,7 +41,7 @@ ylim([97 104])
 yliml=ylim;
 
 
-ylbl=ylabel('Global Production [mbpd]');
+ylbl=ylabel('Global Consumption [mbpd]');
 %ylbl.Position(1)=-170;
 
 yyaxis right
@@ -55,7 +55,7 @@ ax.YAxis(2).Exponent=0;
 
 ax.YTick=yticks;
 
-ttl=title('STEO Projections for Global Production');
+ttl=title('STEO Projections for Global Consumption');
 %ttl.Position(2)=3.3131e+03;
 
 
@@ -67,5 +67,5 @@ xlim([datetime(2022,1,1) datetime(2024,1,1)])
 text(0.54,-0.105,'Twitter: @peterdevietien     Data: EIA STEOs','fontsize',11,'units','normalized')
 
 %%
-pngname='~/projects/eia/post/steo_global_production';
+pngname='~/projects/eia/post/steo_global_consumption';
 print(pngname,'-dpng')

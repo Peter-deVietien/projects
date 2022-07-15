@@ -8,6 +8,9 @@ dates=dates+caldays(14);
 
 %%
 
+dates=[dates;datetime(2022,6,15)];
+cpi=[cpi;9.1];
+
 leftycolor=[0 0.4470 0.7410];
 rightycolor=[0.8500 0.3250 0.0980];
 
@@ -23,7 +26,7 @@ fig.Position=[75.8000 342 1200/scale 675/scale];
 ax=gca;
 ax.FontSize=14;
 ax.YGrid='on';
-
+ylim([3 10])
 
 ylabel('Federal Reserve Assets [Trillions USD]')
 

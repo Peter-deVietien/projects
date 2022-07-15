@@ -24,8 +24,9 @@ sind=find(d2.dates==d1.dates(1));
 d2.dates=d2.dates(sind:end);
 d2.y=d2.y(sind:end);
 
+edate=datetime(2022,6,eomday(2022,6));
 
-eind=find(d1.dates>datetime(2022,4,20),1);
+eind=find(d1.dates==edate);
 
 d1.dates=d1.dates(1:eind);
 d1.y=d1.y(1:eind);
@@ -37,6 +38,10 @@ d2.y=d2.y(1:eind);
 days_remaining=d1.y./d2.y;
 
 %%
+
+fig=figure;
+scale=2;
+fig.Position=[75.8000 342 1200/scale 675/scale];
 
 plot(d1.dates,days_remaining,'linewidth',2,'color',leftycolor)
 
@@ -55,8 +60,8 @@ yyaxis right
 
 [~,infl]=inflation_vs_t(d3.dates);
 
-p=plot(d3.dates,d3.y./infl,'linewidth',3,'color',rightycolor);
-p.Color(4)=0.4;
+p=plot(d3.dates,d3.y./infl,'linewidth',2,'color',rightycolor);
+p.Color(4)=0.8;
 
 hold on
 p=plot([d3.dates(1) d3.dates(end)],[1 1]*d3.y(end)/infl(end),'linewidth',1,'color',rightycolor,'linestyle','-');
@@ -71,35 +76,24 @@ ylabel('Brent [2022 USD]')
 grid on
 
 ax=gca;
-ax.FontSize=22;
+ax.FontSize=14;
 ax.GridAlpha=0.08;
-
-fig=gcf;
-fig.Position=[144 341 892 525];
 
 ax.YAxis(1).Color=leftycolor;
 ax.YAxis(2).Color=rightycolor;
 
 
-xlim([datetime(2004,1,1) datetime(2022,6,1)])
+xlim([datetime(2004,1,1) datetime(2023,1,1)])
 
-k=listfonts;
-nk=numel(k);
-%for i = 1:1
-    %fname=k{i};
-    
-    tstr=sprintf('Days Remaining & Infl. Adj. Brent\nOECD Inventory/Global Consumption');
-    tt=title(tstr);
-    tt.Position=[4.1268e+03 35.8123 -0.5000];
-    tt.FontSize=25;
-    
-    tt.FontName='Arial Unicode MS';%fname;
-  %  pause(1)
- %   print(sprintf('fonts/%s',fname),'-dpng')
-%end
+tstr=sprintf('Days Remaining & Infl. Adj. Brent\nOECD Inventory/Global Consumption');
+tt=title(tstr);
+%tt.Position=[4.1268e+03 35.8123 -0.5000];
+%tt.FontSize=25;
 
-text(0.01,0.02,'Last Data: April 2022 from May STEO','fontsize',16,'units','normalized')
-text(0.37,-0.105,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA, STEO','fontsize',16,'units','normalized')
+tt.FontName='Arial Unicode MS';
+
+text(0.01,0.025,'Last Data: June 2022 from July STEO','fontsize',11,'units','normalized')
+text(0.37,-0.108,'Truth Social: @pdv  Twitter: @peterdevietien   Data: EIA, STEO','fontsize',11,'units','normalized')
 
 %%
 filename='days-remaining-oecd-global-brent';

@@ -13,7 +13,7 @@ inv=process_monthly_data(dinit2);
 %% Clip to common times
 
 sdate=max(con.dates(1),inv.dates(1));
-edate=datetime(2022,5,31);
+edate=datetime(2022,6,eomday(2022,6));
 
 
 ind1=find(con.dates==sdate);
@@ -70,7 +70,7 @@ ax.YAxis(2).Color='k';
 xlim([datetime(2004,1,1) datetime(2023,1,1)])
 
 
-tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nJune STEO:  May Last Data on Plot');
+tstr=sprintf('Days Remaining\nOECD Inventory/Global Consumption\nJuly STEO:  June Last Data on Plot');
 tt=title(tstr,'horizontalalignment','center','units','normalized');
 tt.Position(2)=0.7745;
 tt.Position(1)=0.5;
